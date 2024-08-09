@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            font-family: "Montserrat", sans-serif;
+        }
+        .navbar{
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar-logo{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar-logo img{
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+        }
+        .navbar-links{
+            width: 55%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .navbar-links a{
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+        }
+        .section-banner{
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-image:linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)), url(img/valley-bg.jpg);
+            background-position: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .section-banner h1{
+            font-size: 50px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: #fff;
+        }
+        .staring-from{
+            width: auto;
+            padding: 20px;
+            background-color: #fff;
+            color: black;
+            border-radius: 30px;
+            height: auto;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .contact-form{
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+        .contact-form h3{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .contact-form form{
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-div{
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .form-div input{
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: hidden;
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 5px;
+        }
+        .form-div select{
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            border: hidden;
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 5px;
+        }
+        .form-div textarea{
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            border: hidden;
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 5px;
+        }
+        .form-div button{
+            background-color: black;
+            color: #fff;
+            font-weight: 600;
+            width: 100%;
+            height: 40px;
+            border: hidden;
+            border-radius: 10px;
+        }
+        .fixed-card{
+            position: sticky;
+  top: 0;
+  height: 150vh;
+  overflow-y: auto;       
+        }
+        .over-view h3{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .over-view h2{
+            font-size: 18px;
+            color: #cfa14d;
+            font-weight: 600;
+        }
+        .over-view li{
+            list-style-type: none;
+        }
+        .over-view li i{
+            margin-right: 10px;
+            color: #cfa14d;
+        }
+        .whatsapp-contact{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .whatsapp-contact a button{
+            background-color: #cfa14d;
+            color: #fff;
+            height: 50px;
+            font-weight: 600;
+            border: hidden;
+            width: 200px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .whatsapp-contact a button i{
+            margin-right: 8px;
+        }
+        .card-facility{
+            width: 100%;
+            height: auto;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-facility h5{
+            font-size: 17px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .card-facility p{
+            font-size: 14px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .card-facility img{
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        .location-image{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .location-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .location-card{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .location-card h5{
+            font-size: 17px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .location-card p{
+            font-size: 14px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .location-card img{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            object-fit: contain;
+        }
+        .master-card{
+            border: 1px solid rgb(216, 216, 216);
+            width: 100%;
+            display: flex;
+            padding: 5px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .master-card h5{
+            font-size: 14px;
+        }
+        .master-plan-img{
+            border-radius: 10px;
+        }
+        .master-card img{
+            width: 40px;
+            height: 40px;
+            margin-bottom: 8px;
+        }
+        .table-class {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+        }
+
+        .table-class th {
+            background-color: #f2f2f2; 
+            color: #333; 
+            padding: 12px;
+            text-align: left;
+            border-right: 1px solid #ddd;
+        }
+
+        .table-class th:last-child {
+            border-right: none; 
+        }
+
+        /* Table Body Styles */
+        .table-class td {
+            background-color: #fff; 
+            color: #333; 
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+        .table-class td span{
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .table-class td:last-child {
+            border-right: none; 
+        }
+
+        .table-class tbody tr:hover {
+            background-color: #f9f9f9; 
+        }
+
+        .bed-img {
+            width: 40px;
+            height: 40px;
+            margin: auto;
+        }
+        @media(min-width:320px) and (max-width:480px){
+            .navbar-links{
+                display: none;
+            }
+            .section-banner h1{
+                font-size: 20px;
+                text-align: center;
+            }
+            .navbar-logo{
+                width: 40%;
+                height: 80%;
+            }
+            .fixed-card{
+                height: auto;
+            }
+        }
+   </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="img/visionx-3.jpg" alt="">
+        </div>
+        <div class="navbar-links">
+            <a href="">OVERVIEW</a>
+            <a href="">AMENITIES</a>
+            <a href="">LOCATION</a>
+            <a href="">FLOOR PLAN</a>
+            <a href="">MASTER PLAN</a>
+        </div>
+    </div>
+    <div class="section-banner">
+        <h1 class="mb-4">THE VALLEY PHASE TWO</h1>
+        <div class="staring-from">
+            STARTING FROM AED 2.48 M
+        </div>
+    </div>
+    <div class="container-fluid pt-3 pb-3">
+        <div class="row">
+        <div class="col-md-9">
+            <div class="over-view mb-3 border rounded p-3">
+                <h3>Overview</h3>
+                <p>The Valley Phase 2 by Emaar Properties presents the latest launch introducing elegantly designed 3 & 4-bedroom townhouses within Dubai. This grand reveal offers premium-designed residences, among the largest of its kind, promising luxurious living spaces. Nestled within the expansive and scenic landscapes, this phase draws inspiration from the beauty of nature and the spirit of adventure. Encompassing rolling hills, lush meadows, serene rivers, picturesque valleys, and dense forests, the development offers an immersive experience in a pristine natural environment. Winding trails lead explorers through these stunning terrains, unveiling hidden treasures at every turn.</p>
+
+                 <p>   Located at the outskirts of Dubai, the development offers a tranquil lifestyle to its residents offering quick and easy navigation. The strategic location here offers exceptional connectivity via Jebel Ali Lehbab Road with the Sheikh Zayed Road. The community is a connected to the vital covered address offering easy access to the vital corridor such as Jebel Ali area, Dubai South, and DIP as well as easy access to the Expo 2020. The quick connectivity and accessibility makes this a prime location, where residents can enjoy the both serenity and convenience.</p>
+                    
+                <p>    This new address is more than just a development, this is a community and the vision brought to life, where inspirations flourish amidst vast shimmering sands and verdant spaces. This new town is designed to empower dreams and foster innovation, creating a caring environment for all its residents. It’s the place where modern living meets urban charm, blending urban convenience with natural beauty.</p>
+                    
+                 <p>   Living here at this development means to indulge in luxurious amenities and services, enhancing every aspect of lifestyle. The self-sufficient community is designed to create with a sense of leisure, focus and relaxation, where the lifestyle is premium and exclusive. Residents can enjoy access to the refreshing swimming pool, stay active at tennis court, and achieve their fitness goals at the state of the art gymnasium, leisurely strolls through the orchard or an active session at the skate park. From the tranquil surroundings to the top-notch facilities, it offers a seamless lifestyle integrating modern comfort with richness of cultural facilities at doorstep.</p>
+                 <h2>Key Highlights</h2>
+                 <li><i class="fa-solid fa-angles-right"></i>First release of premium collection of 3 & 4-bedroom townhouses, elegantly designed to largest and most refined residences.</li>
+                 <li><i class="fa-solid fa-angles-right"></i>   Prime location at The Valley 2 in Dubai, with easy access via Jebel Ali Lehbab Road offering endless connectivity to key destinations.</li>
+                 <li> <i class="fa-solid fa-angles-right"></i> Nature inspired living offering landscaped with rolling hills, lush meadows, serene river and dense forests.</li>
+                  <li><i class="fa-solid fa-angles-right"></i> Situated on the outskirts of Dubai, offers a peaceful, family-friendly atmosphere while still being within easy reach of the city.</li>
+                  <li><i class="fa-solid fa-angles-right"></i> Enjoy a lifestyle enriched by world-class facilities, including swimming pools, tennis courts, state of the art fitness centres and more.</li>
+                  <li> <i class="fa-solid fa-angles-right"></i> Designed to meet the all residents needs within the community, offering easy access to parks, sports facilities, retail outlets, and recreational areas.</li>
+            </div>
+            <div class="col-md-12 border rounded p-3">
+                <h3 class="mb-3">Feature & Amenities</h3>
+                <div class="row gx-3 gy-3">
+                    <div class="col-md-3">
+                        <div class="card-facility">
+                            <img class="mb-2" src="img/Dining-Outlets.webp" alt="">
+                            <h5>Dining Outlets</h5>
+                            <p>Where good food is served to people, often in a formal way.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-facility">
+                            <img class="mb-2" src="img/Green-Surrounding.webp" alt="">
+                            <h5>Green Surrounding</h5>
+                            <p>Perfect for those who prefer to stay close to nature.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-facility">
+                            <img class="mb-2" src="img/Gymnasium.webp" alt="">
+                            <h5>Gymnasium</h5>
+                            <p>For those who want to remain fit and lead a healthy lifestyle.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-facility">
+                            <img class="mb-2" src="img/Kids-Play-Area.webp" alt="">
+                            <h5>Kids Play Area</h5>
+                            <p>An area used for outdoor play or recreation, especially by children</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-facility">
+                            <img class="mb-2" src="img/Parking-Facility.webp" alt="">
+                            <h5>Parking Facility</h5>
+                            <p>Covered parking space where you can leave your vehicle</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-facility">
+                            <img class="mb-2" src="img/Restaurants.webp" alt="">
+                            <h5>Restaurants</h5>
+                            <p>Treat your inner foodie by serving authentic flavors.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-facility">
+                            <img class="mb-2" src="img/Supermarket.webp" alt="">
+                            <h5>Supermarket</h5>
+                            <p>A self-service shop offering a wide variety of food & household products.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-facility">
+                            <img class="mb-2" src="img/Swimming-Pool.webp" alt="">
+                            <h5>Swimming Pool</h5>
+                            <p>The best place to head when you want to relax and rejuvenate.</p>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+        </div>
+        <div class="col-md-3 fixed-card">
+            <div class="contact-form p-3">
+                <h3 class="text-center mb-3 mt-3">GET IN TOUCH</h3>
+                <form >
+                    <div class="form-div">
+                        <input type="text" name="" id="" placeholder="Name">
+                    </div>
+                    <div class="form-div">
+                        <input type="text" name="" id="" placeholder="Email Id">
+                    </div>
+                    <div class="form-div">
+                        <input type="text" name="" id="" placeholder="Phone Number">
+                    </div>
+                    <div class="form-div">
+                        <select name="" id="">
+                            <option value="">I am</option>
+                        </select>
+                    </div>
+                    <div class="form-div">
+                        <textarea name="" id="" rows="5" cols="5" placeholder="Enter Message"></textarea>
+                    </div>
+                    <div class="form-div">
+                        <button type="submit">SEND MESSAGE</button>
+                    </div>
+                </form>
+                <div class="whatsapp-contact">
+                    <a href=""><button><i class="fa-solid fa-phone"></i>+971 58 595 9770</button></a>
+                    <a href=""><button><i class="fa-brands fa-whatsapp"></i>+971 58 595 9770</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid mt-3 pt-4 pb-4 rounded">
+        <h3>Location</h3>
+        <div class="row gy-3">
+            <div class="col-md-4">
+                <div class="location-image">
+                    <a href="img/location-valley.webp"><img src="img/location-valley.webp" class="" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-12">
+                    <div class="row gx-3 gy-3">
+                    <div class="col-md-4">
+                        <div class="location-card">
+                            <img src="img/Burj-Khalifa.webp" alt="">
+                            <h5>Burj Khalifa</h5>
+                            <p>25 Minutes</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="location-card">
+                            <img src="img/Downtown-Dubai.webp" alt="">
+                            <h5>Downtown Dubai</h5>
+                            <p>20 Minutes</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="location-card">
+                            <img src="img/Dubai-International-Airport.webp" alt="">
+                            <h5>Dubai International Airport</h5>
+                            <p>25 Minutes</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="location-card">
+                            <img src="img/Dubai-Outlet-Mall.webp" alt="">
+                            <h5>Dubai Outlet Mall</h5>
+                            <p>08 Minutes</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="location-card">
+                            <img src="img/Dubai-Rugby-Sevens.webp" alt="">
+                            <h5>Dubai Rugby Sevens</h5>
+                            <p>05 Minutes</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="location-card">
+                            <img src="img/The-Dubai-Mall.webp" alt="">
+                            <h5>The Dubai Mall</h5>
+                            <p>25 Minutes</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-3 pt-4 pb-4 rounded">
+        <h3>Master Plan</h3>
+        <div class="row gy-3">
+            <div class="col-md-6">
+                <div class="location-image">
+                    <a href="img/master-plan.webp"><img class="master-plan-img" src="img/master-plan.webp" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <div class="row gx-2 gy-2">
+                        <div class="col-md-4 col-6">
+                            <div class="master-card">
+                                <img src="img/BBQ-Areas.webp" alt="">
+                                <h5>BBQ Areas</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="master-card">
+                                <img src="img/Cycling-Trails.webp" alt="">
+                                <h5>Cycling Trails</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="master-card">
+                                <img src="img/Fitness-Centre.webp" alt="">
+                                <h5>Fitness Centre</h5>
+                            </div>
+                        </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Park.webp" alt="">
+                            <h5>Gardens and Parks</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Jogging-Trails.webp" alt="">
+                            <h5>Jogging Trails</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Children-Park.webp" alt="">
+                            <h5>Kids Park</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Outdoor-Dining-Area.webp" alt="">
+                            <h5>Outdoor Dining Area</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Outdoor-Gymnasium.webp" alt="">
+                            <h5>Outdoor Gymnasium</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Restaurant-Cafe.webp" alt="">
+                            <h5>Restaurant and Cafe</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Running-Track.webp" alt="">
+                            <h5>Running Track</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Sports-Court.webp" alt="">
+                            <h5>Sports Court</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="master-card">
+                            <img src="img/Yoga-&-Meditation.webp" alt="">
+                            <h5>Yoga & Meditation</h5>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h3>Floor Plan</h3>
+        <table class='table table-class' id='floorplanlstId'>
+            <thead>
+                <tr>
+                    <th class="table-head">Floor Plan</th>
+                    <th>Category</th>
+                    <th>Unit Type</th>
+                    <th>Floor Details</th>
+                    <th>Sizes</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href=''>
+                            <img src='img/bed.webp' width='75' height='75' data-echo='img/bed.webp' width='75' height='75' alt='3 Bedroom' class='bed-img'>
+                        </a>
+                    </td>
+                    <td class='CategoryCaption'>3 Bedroom</td>
+                    <td class='SubCategoryCaption'>3 Bedrooms + Maid</td>
+                    <td>
+                        <span>3 Bedroom Townhouse</span>
+                    </td>
+                    <td>
+                        <span>2450.00Sq Ft to 2450.00 Sq Ft &nbsp;Sq Ft</span>
+                    </td>
+                    <td class='PropertyType'>Townhouse</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href='img/bed.webp'>
+                            <img src='img/bed.webp' width='75' height='75' data-echo='img/bed.webp' width='75' height='75' alt='4 Bedroom' class='bed-img'>
+                        </a>
+                    </td>
+                    <td class='CategoryCaption'>4 Bedroom</td>
+                    <td class='SubCategoryCaption'>4 Bedrooms + Maid</td>
+                    <td>
+                        <span>4 Bedroom Townhouse</span>
+                    </td>
+                    <td>
+                        <span>2754.00Sq Ft to 2754.00 Sq Ft &nbsp;Sq Ft</span>
+                    </td>
+                    <td class='PropertyType'>Townhouse</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section-gallery mb-5 pt-5">
+        <h3 class="text-center mb-3">Photo Gallery</h3>
+        <div class="gallery-wrapper">
+            <div class="gallery-inner">
+                <div class="gallery-img">
+                    <img src="img/g-1.webp" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="img/g-2.webp" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="img/g-3.webp" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="img/g-4.webp" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="img/g-5.webp" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="img/g-6.webp" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="img/g-7.webp" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="img/g-8.webp" alt="">
+                </div>
+                <div class="gallery-img">
+                    <img src="img/g-9.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const galleryStyleSheet = `
+    .gallery-wrapper {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    
+    .gallery-wrapper img {
+        max-width: 100%;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .gallery-wrapper .gallery-img img {
+        cursor: pointer;
+    }
+    
+    .gallery-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        z-index: 2;
+        position: relative;
+    }
+    
+    .gallery-popup.active + .gallery-overlay {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background-color: rgb(0 0 0 / 75%);
+        z-index: 5;
+        overflow: hidden;
+    }
+    
+    .gallery-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 48px);
+        height: calc(100% - 80px);
+        padding: 0px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 6;
+        animation: showPopUp 0.45s linear;
+    }
+    
+    .gallery-popup .close,
+    .gallery-popup .next,
+    .gallery-popup .prev {
+        position: absolute;
+        top: 0;
+        right: 2rem;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .gallery-popup img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .gallery-popup .close {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        top: -40px;
+        right: 0;
+        background:white;
+        border:hidden;
+    }
+    
+    .gallery-popup .next {
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgb(255 255 255 / 75%);
+    }
+    
+    .gallery-popup .prev {
+        left: 0px;
+        right: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgb(255 255 255 / 75%);
+    }
+    
+    .gallery-wrapper .gallery-inner {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        position: relative;
+        z-index: 4;
+    }
+    
+    @keyframes showPopUp {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+        50% {
+            opacity: 0.5;
+            visibility: visible;
+        }
+        100% {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    
+    @keyframes imgTransitionNext {
+        0% {
+            transform: translateX(100vw);
+            opacity: 0;
+        }
+        
+        5% {
+            transform: translateX(95vw);
+            opacity: 0.15
+        }
+        
+        10% {
+            transform: translateX(90vw);
+            opacity: 0.1;
+        }
+        
+        15% {
+            transform: translateX(85vw)
+            opacity: 0.20
+        }
+        
+        20% {
+            transform: translateX(80vw);
+            opacity: 0.2;
+        }
+        
+        25% {
+            transform: translateX(75vw)
+            opacity: 0.20
+        }
+        
+        30% {
+            transform: translateX(70vw);
+            opacity: 0.3;
+        }
+        
+        35%{
+            transform: translateX(75vw)
+            opacity: 0.35;
+        }
+        
+        40% {
+            transform: translateX(60vw);
+            opacity: 0.4;
+        }
+        
+        45%{
+            transform: translateX(55vw)
+            opacity: 0.45;
+        }
+        
+        50% {
+            transform: translateX(50vw);
+            opacity: 0.5;
+        }
+        
+        55%{
+            transform: translateX(45vw)
+            opacity: 0.55;
+        }
+        
+        60% {
+            transform: translateX(40vw);
+            opacity: 0.6;
+        }
+        
+        65%{
+            transform: translateX(65vw)
+            opacity: 0.65;
+        }
+        
+        70% {
+            transform: translateX(30vw);
+            opacity: 0.7;
+        }
+        
+    75%{
+            transform: translateX(25vw)
+            opacity: 0.75;
+        }
+        
+        80% {
+            transform: translateX(20vw);
+            opacity: 0.8;
+        }
+        
+        85%{
+            transform: translateX(15vw)
+            opacity: 0.85;
+        }
+        
+        90% {
+            transform: translateX(10vw);
+            opacity: 0.9;
+        }
+        
+        95%{
+            transform: translateX(5vw)
+            opacity: 0.95;
+        }
+        
+        100%{
+            transform: translateX(0vw);
+            opacity: 1;
+        }
+    }
+    
+    
+    @keyframes imgTransitionPrev {
+        0% {
+            transform: translateX(-100vw);
+            opacity: 0;
+        }
+        
+        5% {
+            transform: translateX(-95vw);
+            opacity: 0.15
+        }
+        
+        10% {
+            transform: translateX(-90vw);
+            opacity: 0.1;
+        }
+        
+        15% {
+            transform: translateX(-85vw)
+            opacity: 0.20
+        }
+        
+        20% {
+            transform: translateX(-80vw);
+            opacity: 0.2;
+        }
+        
+        25% {
+            transform: translateX(-75vw)
+            opacity: 0.20
+        }
+        
+        30% {
+            transform: translateX(-70vw);
+            opacity: 0.3;
+        }
+        
+        35%{
+            transform: translateX(-75vw)
+            opacity: 0.35;
+        }
+        
+        40% {
+            transform: translateX(-60vw);
+            opacity: 0.4;
+        }
+        
+        45%{
+            transform: translateX(-55vw)
+            opacity: 0.45;
+        }
+        
+        50% {
+            transform: translateX(-50vw);
+            opacity: 0.5;
+        }
+        
+        55%{
+            transform: translateX(-45vw)
+            opacity: 0.55;
+        }
+        
+        60% {
+            transform: translateX(-40vw);
+            opacity: 0.6;
+        }
+        
+        65%{
+            transform: translateX(-65vw)
+            opacity: 0.65;
+        }
+        
+        70% {
+            transform: translateX(-30vw);
+            opacity: 0.7;
+        }
+        
+    75%{
+            transform: translateX(-25vw)
+            opacity: 0.75;
+        }
+        
+        80% {
+            transform: translateX(-20vw);
+            opacity: 0.8;
+        }
+        
+        85%{
+            transform: translateX(-15vw)
+            opacity: 0.85;
+        }
+        
+        90% {
+            transform: translateX(-10vw);
+            opacity: 0.9;
+        }
+        
+        95%{
+            transform: translateX(-5vw)
+            opacity: 0.95;
+        }
+        
+        100%{
+            transform: translateX(0vw);
+            opacity: 1;
+        }
+    }
+    
+    @media only screen and (max-width: 1280px) {
+        .gallery-wrapper .gallery-inner {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .gallery-wrapper .gallery-inner {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        .gallery-popup .next {
+            right: 0px;
+        }
+        .gallery-popup .prev {
+            left: 0px;
+        }
+        
+        .gallery-popup {
+            top: 60px !important;
+            left: 50% !important;
+            transform: translate(-50%, 0%);
+            height: calc(350px - 60px)
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .gallery-wrapper .gallery-inner {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    `;
+    
+    const body = document.querySelector("body");
+    const galleryWrapper = document.querySelector(".gallery-wrapper");
+    
+    const styeElement = document.createElement("style");
+    styeElement.innerHTML = galleryStyleSheet;
+    styeElement.style.display = "none";
+    body.append(styeElement);
+    
+    const galleryPopup = document.createElement("div");
+    galleryPopup.className = "gallery-popup";
+    
+    galleryPopup.innerHTML = `
+        <button class="close">&times;</button>
+            <span class="next">&#187;</span>
+            <span class="prev">&#171;</span>
+            <img src="" alt="">
+    `;
+    
+    const galleryOverlay = document.createElement("div");
+    galleryOverlay.className = "gallery-overlay";
+    body.prepend(galleryOverlay);
+    body.prepend(galleryPopup);
+    
+    const images = [...galleryWrapper.querySelectorAll(".gallery-img img")];
+    const closeBtn = galleryPopup.querySelector(".close");
+    const nextBtn = galleryPopup.querySelector(".next");
+    const prevBtn = galleryPopup.querySelector(".prev");
+    
+    nextBtn.addEventListener("click", nextImg);
+    prevBtn.addEventListener("click", prevImg);
+    
+    // Creating Animation For Image Transition
+    const imgTransitionNext = `animation: imgTransitionNext 0.45s linear`;
+    const imgTransitionPrev = `animation: imgTransitionPrev 0.45s linear`;
+    let showImg = galleryPopup.querySelector(".gallery-popup img");
+    
+    let selectedImg = null;
+    let startCount = 0;
+    let endCount = images.length - 1;
+    
+    closeBtn.addEventListener("click", (e) => {
+        galleryPopup.style.display = "none";
+        galleryPopup.classList.remove("active");
+        selectedImg === null;
+        startCount = 0;
+        endCount = images.length - 1;
+        body.style.overflow = "auto";
+    });
+    
+    // Click Next Button Function
+    function nextImg() {
+        if (selectedImg < 0) return;
+        if (selectedImg === endCount) {
+            selectedImg = startCount;
+        } else {
+            selectedImg++;
+        }
+        showImg.src = images[selectedImg].src;
+        addRemoveAnimationNext();
+    }
+    
+    // Click Prev Button Function
+    function prevImg() {
+        if (selectedImg < 0) return;
+        if (selectedImg === startCount) {
+            selectedImg = endCount;
+        } else {
+            selectedImg--;
+        }
+        showImg.src = images[selectedImg].src;
+        addRemoveAnimationPrev();
+    }
+    
+    // Initial Click Handler
+    images.forEach((img, index) => {
+        img.addEventListener("click", (e) => {
+            galleryPopup.style.display = "block";
+            galleryPopup.classList.add("active");
+            showImg.src = e.currentTarget.src;
+            selectedImg = index;
+            body.style.overflow = "hidden";
+        });
+    });
+    
+    // Function for add and Remove Style Attribute
+    function addRemoveAnimationNext() {
+        showImg.setAttribute("style", imgTransitionNext);
+        setTimeout(() => {
+            showImg.setAttribute("style", "");
+        }, 500);
+    }
+    
+    function addRemoveAnimationPrev() {
+        showImg.setAttribute("style", imgTransitionPrev);
+        setTimeout(() => {
+            showImg.setAttribute("style", "");
+        }, 500);
+    }
+    
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
