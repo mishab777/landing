@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Jada</title>
+    <link rel="shortcut icon" href="img/visionx-3.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            font-family: "Montserrat", sans-serif;
+        }
+        .bg-video-container {
+         position: relative;
+        width: 100%;
+        margin:auto;
+        }
+        .bg-video {
+         width: 100%;
+         height: auto;
+         object-fit: contain;
+        }
+        .home-section-one{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: rgb(0,0,0,0.4);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .home-section-one-content{
+        height:100%;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-section-one h1{
+        font-size: 60px;
+        /*color: #CCAB4D;*/
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        transition: 0.4s ease;
+        letter-spacing:5px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .home-section-one p{
+        margin:0;
+	overflow: hidden;
+}
+.home-section-one p span{
+    font-size: 45px;
+    color:#fff;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 46px;
+    text-align:center;
+    display: none;
+    }
+.home-section-one p span.text-in{
+	display: block;
+	animation: textIn .4s ease;
+}
+.home-section-one p span.text-out{
+	animation: textOut .4s ease;
+}
+@keyframes textIn{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+@keyframes textOut{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
+
+	}
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+.card-property{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid rgb(205, 205, 205);
+    position: relative;
+    z-index: 3;
+}
+.card-property img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-property span{
+    font-size: 16px;
+    color: black;
+}
+.card-property a{
+    text-decoration: underline;
+    font-weight: 600;
+    color: black;
+    font-size: 16px;
+    align-self: flex-end;    
+}
+.section-2{
+    margin-top: -120px;
+    position: relative;
+}
+/* From Uiverse.io by mrhyddenn */ 
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all .3s;
+}
+
+.card_box:hover {
+  transform: scale(0.9);
+}
+
+.card_box span {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_box h3{
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+}
+.card_box h5{
+    font-size: 18px;
+    color: #fff;
+}
+.card_box span::before {
+  content: 'AL JADA';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+}
+
+.card_box span::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  box-shadow: 140px -140px #cc3f47;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+.section-3 h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+.section-3 img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.section-3-content h3{
+    font-size: 30px;
+}
+.section-3-content p{
+    font-weight: 600;
+    font-size: 15px;
+}
+.section-3-content-2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.section-3-content-2 li{
+    width: 45%;
+    margin-bottom: 5px;
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+.section-3-content-2 li i{
+    margin-right: 8px;
+    color: #F09819;
+}
+@media(min-width:320px) and (max-width:480px){
+    .bg-video-container {
+  position: relative;
+  height: 80vh;
+  margin:auto;
+  width:100%;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top:0;
+}
+.card_box{
+    height: 200px;
+}
+    .home-section-one-content h1{
+        font-size: 40px;
+        letter-spacing: 0px;
+    }
+    .home-section-one-content p span{
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="img/visionx-3.png" alt="">
+    </div>
+
+    <div class="bg-video-container">
+        <video class="bg-video" autoplay muted loop>
+         <source src="img/Aljada.mp4"/>
+         </video>
+        <div class="home-section-one">
+            <div class="home-section-one-content">
+                <h1 class="mb-3">WHY CHOOSE AL JADA?</h1>
+               <p class="animate-text">
+                <span>Modern Architecture</span>
+                <span>Family-Friendly Environment</span>
+                <span>Investment Potential</span>
+             </p>
+             </div>
+        </div>
+        </div>
+        <div class="container section-2 pb-4">
+            <div class="row gx-3 gy-3">
+                <div class="col-md-4">
+                    <div class="card-property">
+                        <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2023/05/Rove-home-category-490x220.jpg" alt="">
+                        <span>Rove Serviced Apartments</span>
+                        <a href="">Know More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                     <div class="card-property">
+                        <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2023/12/il-teatro-490x220.jpg" alt="">
+                        <span>il Teatro Residences at AlJada</span>
+                        <a href="">Know More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-property">
+                        <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2022/08/sokoon-490x220.jpg" alt="">
+                        <span>Sokoon at AlJada</span>
+                        <a href="">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-4 pb-4">
+            <div class="row gx-4 gy-3">
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Project size</h5>
+                            <h3>24M sq.ft.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Green space</h5>
+                            <h3>250,000 m2</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Residential units</h5>
+                            <h3>25,000</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Family entertainment</h5>
+                            <h3>1.9M sq.ft.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container section-3 pt-4 pb-4">
+            <h3 class="mb-4">A self-sustained community</h3>
+            <div class="row gx-0">
+                <div class="col-md-6">
+                    <img src="https://fnst.axflare.com/community/JPEG/SOIHuYsAeq.jpeg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="section-3-content p-3">
+                        <h3 class="mb-3">The Downtown of new Sharjah.</h3>
+                        <p>Aljada Downtown is Sharjah's most dynamic urban district, offering a blend of modern living, shopping, dining, and entertainment. As the heart of the Aljada development, it promises a lifestyle that combines luxury with convenience. Whether you're exploring the beautifully landscaped parks, indulging in diverse culinary delights, or shopping at the high-end boutiques, Aljada Downtown provides an unmatched experience for residents and visitors alike. </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                       <div class="section-3-content-2 p-3">
+                        <li><i class="fa-solid fa-circle"></i>24 million sqft development</li>
+                        <li><i class="fa-solid fa-circle"></i>4.4km retail boulevard length</li>
+                        <li><i class="fa-solid fa-circle"></i>25,000 residential units</li>
+                        <li><i class="fa-solid fa-circle"></i>4 hotels</li>
+                        <li><i class="fa-solid fa-circle"></i>250,000 sqm green space</li>
+                        <li><i class="fa-solid fa-circle"></i>3 schools</li>
+                        <li><i class="fa-solid fa-circle"></i>500,000 sqm prime office space</li>
+                        <li><i class="fa-solid fa-circle"></i>1 education district</li>
+                        <li><i class="fa-solid fa-circle"></i>165,000 sqm retail Leasable space</li>
+                        <li><i class="fa-solid fa-circle"></i>7 mins from Sharjah airport</li>
+                        <li><i class="fa-solid fa-circle"></i>20 mins from Dubai International Airport</li>
+                        <li><i class="fa-solid fa-circle"></i>1.9 million sqft family entertainment complex</li>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://media.licdn.com/dms/image/D4D12AQEKa5Tp1CLnDg/article-inline_image-shrink_1000_1488/0/1703330414216?e=1727913600&v=beta&t=xqi1bR2oxwW0Emz-PN-p5VM436A9Mlzgfbytx1dg9lc" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container section-3 pt-4 pb-4">
+            <h3 class="mb-3">Explore Aljada: Your Guide to Sharjah's Premier Urban Community</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115410.49297430391!2d55.39187427128389!3d25.318381794133007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3e5f5f5cc51ce01b%3A0x28942edbf276e66!2sAljada%20Discovery%20Centre%20Aljada%20-%20Muwaileh%20Commercial%20-%20Sharjah%20-%20United%20Arab%20Emirates!3m2!1d25.3184047!2d55.4742758!5e0!3m2!1sen!2sin!4v1723291206556!5m2!1sen!2sin" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <script>
+            const txts=document.querySelector(".animate-text").children,
+                  txtsLen=txts.length;
+              let index=0;
+             const textInTimer=2000,
+                   textOutTimer=2000;
+
+            function animateText() {
+               for(let i=0; i<txtsLen; i++){
+                 txts[i].classList.remove("text-in","text-out");
+               }
+               txts[index].classList.add("text-in");
+
+               setTimeout(function(){
+                   txts[index].classList.add("text-out");
+               },textOutTimer)
+
+               setTimeout(function(){
+
+                 if(index == txtsLen-1){
+                     index=0;
+                   }
+                  else{
+                      index++;
+                    }
+                   animateText();
+               },textInTimer);
+            }
+
+            window.onload=animateText;
+
+   </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
