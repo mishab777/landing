@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landig</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Al Jada</title>
+    <link rel="shortcut icon" href="img/visionx-3.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -12,649 +12,772 @@
         *{
             font-family: "Montserrat", sans-serif;
         }
-        .section-1{
-            background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url(img/111.jpg);
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-direction: column;
+        .bg-video-container {
+         position: relative;
+        width: 100%;
+        margin:auto;
         }
-        .logos-top{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
+        .bg-video {
+         width: 100%;
+         height: auto;
+         object-fit: contain;
         }
-        .logos-top img{
-            width: auto;
-            height: 80px;
-            margin-right: 50px;
-            object-fit: contain;
-        }
-        .section-1-h1{
-            font-size: 40px;
-            font-weight: 500;
-            color: #fff;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        .description-top h1{
-            font-size: 45px;
-            color: #fff;
-            text-align: center;
-        }
-        .description-top h5{
-            color: #fff;
-            text-align: center;
-            font-size: 20px;
-        }
-        .description-top h3{
-            text-align: center;
-        }
-        .description-top h3 span{
-            font-size: 20px;
-            font-weight: 600;
-            color: #fff;
-            margin-right: 50px;
-        }
-        .description-top h3 span i{
-            margin-right: 10px;
-        }
-.cssbuttons-io-button {
-  background: #D0AD6A;
-  color: white;
-  font-family: inherit;
-  padding: 0.35em;
-  padding-left: 1.2em;
-  font-size: 17px;
-  font-weight: 500;
-  border-radius: 0.9em;
-  border: none;
-  letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
-  box-shadow: inset 0 0 1.6em -0.6em #D0AD6A;
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
-  cursor: pointer;
+        .home-section-one{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: rgb(0,0,0,0.4);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .home-section-one-content{
+        height:100%;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-section-one h1{
+        font-size: 60px;
+        /*color: #CCAB4D;*/
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        transition: 0.4s ease;
+        letter-spacing:5px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .home-section-one p{
+        margin:0;
+	overflow: hidden;
 }
+.home-section-one p span{
+    font-size: 45px;
+    color:#fff;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 46px;
+    text-align:center;
+    display: none;
+    }
+.home-section-one p span.text-in{
+	display: block;
+	animation: textIn .4s ease;
+}
+.home-section-one p span.text-out{
+	animation: textOut .4s ease;
+}
+@keyframes textIn{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+@keyframes textOut{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
 
-.cssbuttons-io-button .icon {
-  background: white;
-  margin-left: 1em;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 0.7em;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em #D0AD6A;
-  right: 0.3em;
-  transition: all 0.3s;
+	}
 }
-
-.cssbuttons-io-button:hover .icon {
-  width: calc(100% - 0.6em);
-}
-
-.cssbuttons-io-button .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: #D0AD6A;
-}
-
-.cssbuttons-io-button:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttons-io-button:active .icon {
-  transform: scale(0.95);
-}
-.section-1 a{
-    text-decoration: none;
-}
-.section-2{
-    height: auto;
-    background-color: black;
+.navbar{
     width: 100%;
-}
-.section-2 h1{
-    color: #fff;
-}
-.enquiry-div{
-    width: 100%;
-    height: auto;
-}
-.enquiry-div input{
-    width: 100%;
-    padding-left: 10px;
-    height: 45px;
-    border-radius: 5px;
-    border: hidden;
-    outline: none;
-}
-.enquiry-div button{
-    width: 100%;
-    height: 45px;
-    border: hidden;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #D0AD6A;
-}
-.section-3{
-    background-image: url(https://i3.wp.com/static.vecteezy.com/system/resources/previews/001/874/132/original/abstract-geometric-white-background-free-vector.jpg);
-            background-position: center;
-            background-size: cover;
-            width: 100%;
-            height: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 5%;
-            padding-bottom: 5%;
-            flex-direction: column;
-}
-.section-3 h1{
-    font-size: 30px;
-    font-weight: 600;
-    color: black;
-    text-transform: uppercase;
-    text-align: center;
-}
-.section-3 p{
-    color: black;
-    text-align: center;
-}
-.section-3 a{
-    width: 100%;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.get-payment:hover{
-    background-color: black;
-    color: #fff;
-}
-.get-payment{
-    width: 250px;
-    transition: all 0.4s ease-in-out;
-    height: 60px;
-    border: hidden;
-    border: 2px solid black;
-    border-radius: 30px;
-    font-weight: bold;
-    color: black;
-    background-color: #fff;
-}
-.get-offer{
-    width: 250px;
-    transition: all 0.4s ease-in-out;
-    height: 60px;
-    border: hidden;
-    border: 2px solid black;
-    border-radius: 30px;
-    font-weight: bold;
-    color: #fff;
-    background-color: black;
-}
-.carousel-item img{
-    width: 100%;
-    height: 100vh;
-}
-.facility-card{
-    background-color: white;
-    width: 100%;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-}
-.facility-card img{
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
-}
-.facility-card span{
-    font-size: 14px;
-    font-weight: 600;
-}
-.section-4{
-    width: 100%;
-    height: 400px;
-}
-.section-4 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.section-5 h3{
-    font-size: 25px;
-    text-align: center;
-    text-transform: uppercase;
-}
-.two-btn{
-    width: 100%;
-    height: auto;
+    height: 80px;
+    background: transparent;
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
 }
-.two-btn .button-1{
-    width: 150px;
-    transition: all 0.4s ease-in-out;
-    height: 40px;
-    border: hidden;
-    border: 2px solid black;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: black;
-    background-color: #fff;
-    margin-right: 20px;
-    font-size: 14px;
-}
-.two-btn .button-2{
-    width: 250px;
-    text-transform: uppercase;
-    transition: all 0.4s ease-in-out;
-    height: 40px;
-    font-size: 14px;
-    border: hidden;
-    border: 2px solid green;
-    font-weight: bold;
-    color: green;
-    background-color: #fff;
-}
-.interior-card{
+.card-property{
     width: 100%;
-    height: 250px;
-
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid rgb(205, 205, 205);
+    position: relative;
+    z-index: 3;
 }
-.interior-card img{
+.card-property img{
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
 }
-.section-6{
-    background-color: #F8F8F8;
+.card-property span{
+    font-size: 16px;
+    color: black;
 }
-.section-6 h3{
-    text-align: center;
+.card-property a{
+    text-decoration: underline;
+    font-weight: 600;
+    color: black;
+    font-size: 16px;
+    align-self: flex-end;    
 }
-.section-6 a{
+.section-2{
+    margin-top: -120px;
+    position: relative;
+}
+/* From Uiverse.io by mrhyddenn */ 
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all .3s;
+}
+
+.card_box:hover {
+  transform: scale(0.9);
+}
+
+.card_box span {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_box h3{
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+}
+.card_box h5{
+    font-size: 18px;
+    color: #fff;
+}
+.card_box span::before {
+  content: 'AL JADA';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+}
+
+.card_box span::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  box-shadow: 140px -140px #cc3f47;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+.section-3 h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+.section-3 img{
     width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.section-3-content h3{
+    font-size: 30px;
+}
+.section-3-content p{
+    font-weight: 600;
+    font-size: 15px;
+}
+.section-3-content-2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.section-3-content-2 li{
+    width: 45%;
+    margin-bottom: 5px;
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+.section-3-content-2 li i{
+    margin-right: 8px;
+    color: #F09819;
+}
+.section-4 h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+.contact-form{
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/* From Uiverse.io by VitorBaraoDias */ 
+.form-control-main {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  border-radius: 8px;
+}
+.title {
+  font-size: 28px;
+  font-weight: 800;
+}
+.input-field {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  margin-top: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  height: 45px;
+  border: 1.5px solid #ecedec;
+  background: transparent;
+  padding-left: 10px;
+}
+.input:focus {
+  border: 1.5px solid #2d79f3;
+}
+.input-field .label {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.input-field .input:focus ~ .label,
+.input-field .input:valid ~ .label {
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  color: #2d79f3;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.submit-btn {
+  margin-top: 30px;
+  height: 55px;
+  background: #f2f2f2;
+  border-radius: 11px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #363636 0%, #1b1b1b 50%, #000000 100%);
+  box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 0px #000000;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #0000003a;
+}
+.section-4 p{
+    font-weight: 500;
+}
+.navbar-mobile{
+    display: none;
+}
+.logo-desktop{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+.navbar-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+}
+.navbar-links a{
+    text-decoration: none;
+    color: black;
+}
+@media(min-width:320px) and (max-width:480px){
+    .navbar-mobile{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    button {
+  background:transparent;
+  border:none;
+  width:30px;
+  height:30px;
+  cursor:pointer; 
+  outline:0;
+}
+
+.toggle span {
+  width:100%;
+  height:3px;
+  background:#555;
+  display:block;
+  position:relative;
+  coursor:pointer;
+}
+
+.toggle span:before,
+.toggle span:after {
+  content:'';
+  position:absolute;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#555;
+  transition: all 0.3s ease-out;
+}
+
+.toggle span:before {
+  top:-8px;
+}
+
+.toggle span:after {
+  top:8px;
+}
+
+.toggle span.toggle {
+  background:transparent;
+}
+
+.toggle span.toggle:before {
+  top:0;
+  transform:rotate(-45deg);
+  background:#cfa14d;
+  
+}
+
+.toggle span.toggle:after {
+  top:0;
+  transform:rotate(45deg);
+  background:#cfa14d;
+}
+.navbar img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+.sidebar {
+  background:black;
+  width:235px;
+  position:fixed;
+  top:0;
+  left:-235px;
+  z-index: 999;
+  height:100%;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  padding-top:90px;
+  transition:all 0.3s ease-out;
+}
+
+.sidebar ul {
+  list-style:none;
+}
+
+.sidebar ul li {
+  display:block;
+}
+
+.sidebar ul li a {
+  padding:8px 15px;
+  font-size:16px;
+  color:#fff;
+  text-decoration:none;
+  display:block;
+  position:relative;
+  z-index:1;
+  transition:all 0.3s ease-out;
+  font-weight:500;
+}
+
+.sidebar ul li a i{
+    margin-right: 8px;
+    color: #cfa14d;
+}
+.sidebar ul li a:before {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:50%;
+  right:50%;
+  transform:translate(-50%,-50%);
+  width:0;
+  height:1px;
+  background:#cfa14d;
+  z-index:-1;
+  transition:all 0.3s ease-out;
+}
+
+.sidebar ul li a:hover:before {
+  width:100%;
+}
+
+.sidebar ul li a:hover {
+  color:#cfa14d;
+}
+
+.sidebarshow {
+  left:0;
+}
+.logo-sidebar{
+    width: 100%;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
 }
-.section-6 a button{
-    width: 300px;
-    transition: all 0.4s ease-in-out;
-    height: 60px;
-    border: hidden;
-    border: 2px solid black;
-    border-radius: 30px;
-    font-weight: bold;
-    color: #fff;
-    background-color: black;
-}
-.section-7{
-    background-color: black;
-}
-.section-7-content{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-.section-7-content h1{
-    font-size: 30px;
-    font-weight: 600;
-    color: #fff;
-}
-.section-7-content h3{
-    font-size: 20px;
-    font-weight: 600;
-    color: #fff;
-}
-.section-7-content h3 i{
-    margin-right: 10px;
-}
-.section-7-location{
+.logo-sidebar img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
-.section-7-location img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    .bg-video-container {
+  position: relative;
+  height: 80vh;
+  margin:auto;
+  width:100%;
 }
-.section-8{
-    background-color: white;
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top:0;
 }
-.section-8 h3{
-    font-size: 30px;
-    text-align: center;
-    font-weight: 600;
+.card_box{
+    height: 200px;
 }
-.section-8 p{
-    text-align: center;
+.navbar-links{
+    display: none;
 }
-.register-input{
-    width: 100%;
-    height: auto;
-}
-.register-input input{
-    height: 45px;
-    border: hidden;
-    width: 100%;
-    outline: none;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding-left: 10px;
-}
-.register-input button{
-    width: 100%;
-    border: hidden;
-    border-radius: 5px;
-    height: 45px;
-    background-color: #D0AD6A;
-    color: #fff;
-    font-weight: 600;
-}
-@media(min-width:320px) and (max-width:480px){
-    .section-1-h1{
+    .home-section-one-content h1{
+        font-size: 40px;
+        letter-spacing: 0px;
+    }
+    .home-section-one-content p span{
         font-size: 25px;
     }
-    .two-btn{
-        flex-direction: column;
-    }
-    .two-btn .button-1{
-        margin-bottom: 10px;
-    }
-    .logos-top{
-        flex-direction: column;
-    }
-    .logos-top img{
-        margin-right: 0px;
-        margin-bottom: 10px;
-    }
-    .description-top h3{
-        flex-direction: column;
-    }
-    .carousel-item img{
-        height: 300px;
-    }
 }
- </style>
+.chat-box{
+    width: 220px;
+    height: 50px;
+    background-color: #25D366;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 999;
+}
+.chat-box a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+.chat-box a i{
+    margin-right: 10px;
+}
+</style>
 </head>
 <body>
 
-    <div class="section-1">
-        <div class="logos-top pt-4 pb-3">
-            <img src="img/visionx-2.png" alt="">
-            <img src="img/nb-logo.webp" alt="">
+    <div class="navbar">
+        <img src="img/visionx-3.png" class="logo-desktop" alt="">
+        <div class="navbar-links">
+            <a href="aljadanest.html">Nest</a>
+            <a href="aljadaeast.html">East Boulevard</a>
+            <a href="aljadamadar.html">Madar</a>
         </div>
-        <h1 class="section-1-h1">ultra luxury 1~4 bedroom <br>
-            CLOSE TO WYNN casino <br>
-            ras al khaimah al marjan island</h1>
-        <div class="description-top">
-            <h5>STARTING FROM</h5>
-            <h1>AED 1.67M</h1>
-            <h3><span><i class="fa-solid fa-money-bill-trend-up"></i>Pay over 4 years</span><span><i class="fa-solid fa-cube"></i>Sizes From 1,011~3272 SQFT</span></h3>
+        <div class="navbar-mobile">
+        <button type="button" class="toggle" id="toggle">
+            <span></span>
+        </button>
+        <div class="sidebar" id='sidebar'>
+            <a href="" class="logo-sidebar"><img src="img/visionx.png" alt="" height="50" width="auto"></a>
+            <ul>
+              <li><a href="aljadanest.html">Nest</a></li>
+               <li><a href="aljadaeast.html">East Boulevard</a></li>
+                <li><a href="aljadamadar.html">Madar</a></li>
+            </ul>
+          </div>
         </div>
-        <a href="aljada.html">
-<button class="cssbuttons-io-button">
-  Download Brochure
-  <div class="icon">
-    <svg
-      height="24"
-      width="24"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path
-        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-        fill="currentColor"
-      ></path>
-    </svg>
-  </div>
-</button>
-</a>
     </div>
-    <div class="section-2 pt-4 pb-4" id="enquire">
-        <h1 class="text-center mt-3 mb-3">ENQUIRY NOW</h1>
-        <form action="">
-        <div class="container">
+
+<div class="chat-box">
+    <a href="https://wa.me/+971585959770"><i class="fa-brands fa-whatsapp"></i>Chat With Expert</a>
+</div>
+
+    <div class="bg-video-container">
+        <video class="bg-video" autoplay muted loop>
+         <source src="img/Aljada.mp4"/>
+         </video>
+        <div class="home-section-one">
+            <div class="home-section-one-content">
+                <h1 class="mb-3">WHY CHOOSE AL JADA?</h1>
+               <p class="animate-text">
+                <span>Modern Architecture</span>
+                <span>Family-Friendly Environment</span>
+                <span>Investment Potential</span>
+             </p>
+             </div>
+        </div>
+        </div>
+        <div class="container section-2 pb-4">
             <div class="row gx-3 gy-3">
                 <div class="col-md-4">
-                    <div class="enquiry-div">
-                        <input type="text" name="" id="" placeholder="Name">
+                    <div class="card-property">
+                        <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2023/05/Rove-home-category-490x220.jpg" alt="">
+                        <span>Rove Serviced Apartments</span>
+                        <a href="#contact">Know More</a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="enquiry-div">
-                        <input type="text" name="" id="" placeholder="Email">
+                     <div class="card-property">
+                        <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2023/12/il-teatro-490x220.jpg" alt="">
+                        <span>il Teatro Residences at AlJada</span>
+                        <a href="#contact">Know More</a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="enquiry-div">
-                        <input type="text" name="" id="" placeholder="Phone Number">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="enquiry-div">
-                        <button>Submit</button>
+                    <div class="card-property">
+                        <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2022/08/sokoon-490x220.jpg" alt="">
+                        <span>Sokoon at AlJada</span>
+                        <a href="#contact">Know More</a>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
-    </div>
-<div class="section-3">
-    <div class="container">
-    <h1 class="mt-3 mb-3">Nikki Beach Residence & Rosso Bay</h1>
-    <p class="">Immerse in the resort-styled lifestyle and the panoramic views of the Arabian Gulf with quick access to sandy beaches. The state-of-the-art innovative architecture and interiors of the homes combine the comfortable sanctuaries and contemporary features for an upgraded and fresh lifestyle. The convenient and vibrant surrounding of the island covers multiple premium standards of amenities and facilities.</p>
-    <a href="#enquire"><button class="get-payment">Get Payment Terms</button></a>
-    <div id="carouselExampleIndicators" class="carousel slide mt-5 mb-5" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/191.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/113.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/181.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/121.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/112.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <h1 class="mb-3">Live in the heart of al-marjan island</h1>
-      <p class="mb-5">Nikki Beach & Rosso Bay Residences is set to create a unique identity as Aldar’s residential development in Ras Al Khaimah. Nestled between the renowned Rixos Bab Al Bahr and DoubleTree by Hilton Resort & Spa Marjan Island, this premier location on Al Marjan Island is set to redefine coastal living in Ras Al Khaimah. With its strategic location and world-class amenities, Nikki Beach Residences offers a unique and unparalleled lifestyle experience on the picturesque shores of this beautiful emirate.</p>
-      <div class="row gx-3 gy-3">
-        <div class="col-md-3">
-            <div class="facility-card">
-                <img src="img/c-1.png" alt="">
-                <span>Health Club</span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="facility-card">
-                <img src="img/c-2.png" alt="">
-                <span>Close To Wynn Casino</span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="facility-card">
-                <img src="img/c-3.png" alt="">
-                <span>Full Sea View</span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="facility-card">
-                <img src="img/c-4.png" alt="">
-                <span>Serviced Club Lounge</span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="facility-card">
-                <img src="img/c-5.png" alt="">
-                <span>Pool Deck</span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="facility-card">
-                <img src="img/c-6.png" alt="">
-                <span>Infinity Edge Leisure Pool</span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="facility-card">
-                <img src="img/c-7.png" alt="">
-                <span>Outdoor Kids Play Area
-                </span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="facility-card">
-                <img src="img/c-8.png" alt="">
-                <span>Branded Residences</span>
-            </div>
-        </div>
-      </div>
-      <a href="#enquire" class="mt-4 mb-2"><button class="get-offer">GET OFFER DETAILS</button></a>
-</div>
-</div>
-<div class="section-4">
-    <img src="img/131.jpg" alt="">
-</div>
-<div class="container section-5 pt-4 pb-4">
-    <h3 class="mb-4">Register Your Interest</h3>
-    <div class="two-btn">
-        <a href="#enquire"><button class="button-1">Enquire now</button></a>
-        <a href="https://api.whatsapp.com/send?phone=+971585959770&text=Hi%20I%20am%20Interested%20In%20Ras%20Al%20khaimah%20Projects%20Send%20Me%20More%20Details%20For%20The%20Project"><button class="button-2">Enquire on whatsapp</button></a>
-    </div>
-</div>
-<div class="section-6 pt-4 pb-4">
-    <h3 class="mb-4 mt-4">INTERIORS</h3>
-<div class="container mb-4">
-    <div class="row gx-3 gy-3">
-        <div class="col-md-4">
-            <div class="interior-card">
-                <img src="img/141.jpg" alt="">
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="interior-card">
-                <img src="img/151.jpg" alt="">
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="interior-card">
-                <img src="img/161.webp" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<a href="#enquire" class=""><button>Get Price & Payment Terms</button></a>
-</div>
-<div class="section-7 pt-4 pb-4">
-<div class="container">
-    <div class="row gx-3 gy-3">
-        <div class="col-md-6">
-            <div class="section-7-content">
-                <h1 class="mb-4 mt-4">STRATEGICALLY LOCATED</h1>
-                <h3 class="mb-3"><i class="fa-regular fa-clock"></i>05 Mins FROM InterContinental Mina Al Arab</h3>
-                <h3 class="mb-3"><i class="fa-regular fa-clock"></i>07 Mins FROM Al Naeem Mall</h3>
-                <h3 class="mb-3"><i class="fa-regular fa-clock"></i>12 Mins FROM RAK Hospital</h3>
-                <h3 class="mb-3"><i class="fa-regular fa-clock"></i>25 Mins DUBAI International Airport</h3>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="section-7-location">
-                <img src="img/location.webp" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="section-8 pt-4 pb-4">
-    <h3 class="mb-3 mt-4">PRICES & PAYMENT TERMS</h3>
-    <p>Please register your contact details to receive pricing information.</p>
-    <form action="">
-        <div class="container">
-            <div class="row gy-3">
-                <div class="col-md-12">
-                    <div class="register-input">
-                        <input type="text" name="" id="" placeholder="Name">
+        <div class="container pt-4 pb-4">
+            <div class="row gx-4 gy-3">
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Project size</h5>
+                            <h3>24M sq.ft.</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="register-input">
-                        <input type="text" name="" id="" placeholder="Email">
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Green space</h5>
+                            <h3>250,000 m2</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="register-input">
-                        <input type="text" name="" id="" placeholder="Phone Number">
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Residential units</h5>
+                            <h3>25,000</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="register-input">
-                        <button>Submit</button>
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Family entertainment</h5>
+                            <h3>1.9M sq.ft.
+                            </h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
-</div>
-<div class="container-md">
-    <div class="section-title">
-        <h2 style="padding-left: 5%;">The masterplan</h2>
-    </div>
-    <div class="iframe-button-position-Top">
-        <a href="https://propertyexplorer.arada.com/?state=masaar&#038;lang=en&#038;tower=fake&#038;vr=VR01&#038;theme=light" style="background-color: #a2a568; border:1px solid #a2a568;color: #ffffff;" target="_blank" class="button-style-1">Expand</a>
-    </div>
-    <iframe src="https://propertyexplorer.arada.com/?state=masaar&#038;lang=en&#038;tower=fake&#038;vr=VR01&#038;theme=light" style="width: 100%;height: 800px;"></iframe>
-    <div class="clear"></div>
-</div>
+        <div class="container section-3 pt-4 pb-4">
+            <h3 class="mb-4">A self-sustained community</h3>
+            <div class="row gx-0">
+                <div class="col-md-6">
+                    <img src="https://fnst.axflare.com/community/JPEG/SOIHuYsAeq.jpeg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="section-3-content p-3">
+                        <h3 class="mb-3">The Downtown of new Sharjah.</h3>
+                        <p>Aljada Downtown is Sharjah's most dynamic urban district, offering a blend of modern living, shopping, dining, and entertainment. As the heart of the Aljada development, it promises a lifestyle that combines luxury with convenience. Whether you're exploring the beautifully landscaped parks, indulging in diverse culinary delights, or shopping at the high-end boutiques, Aljada Downtown provides an unmatched experience for residents and visitors alike. </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                       <div class="section-3-content-2 p-3">
+                        <li><i class="fa-solid fa-circle"></i>24 million sqft development</li>
+                        <li><i class="fa-solid fa-circle"></i>4.4km retail boulevard length</li>
+                        <li><i class="fa-solid fa-circle"></i>25,000 residential units</li>
+                        <li><i class="fa-solid fa-circle"></i>4 hotels</li>
+                        <li><i class="fa-solid fa-circle"></i>250,000 sqm green space</li>
+                        <li><i class="fa-solid fa-circle"></i>3 schools</li>
+                        <li><i class="fa-solid fa-circle"></i>500,000 sqm prime office space</li>
+                        <li><i class="fa-solid fa-circle"></i>1 education district</li>
+                        <li><i class="fa-solid fa-circle"></i>165,000 sqm retail Leasable space</li>
+                        <li><i class="fa-solid fa-circle"></i>7 mins from Sharjah airport</li>
+                        <li><i class="fa-solid fa-circle"></i>20 mins from Dubai International Airport</li>
+                        <li><i class="fa-solid fa-circle"></i>1.9 million sqft family entertainment complex</li>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://media.licdn.com/dms/image/D4D12AQEKa5Tp1CLnDg/article-inline_image-shrink_1000_1488/0/1703330414216?e=1727913600&v=beta&t=xqi1bR2oxwW0Emz-PN-p5VM436A9Mlzgfbytx1dg9lc" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container section-3 pt-4 pb-4">
+            <h3 class="mb-3">Explore Aljada: Your Guide to Sharjah's Premier Urban Community</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115410.49297430391!2d55.39187427128389!3d25.318381794133007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3e5f5f5cc51ce01b%3A0x28942edbf276e66!2sAljada%20Discovery%20Centre%20Aljada%20-%20Muwaileh%20Commercial%20-%20Sharjah%20-%20United%20Arab%20Emirates!3m2!1d25.3184047!2d55.4742758!5e0!3m2!1sen!2sin!4v1723291206556!5m2!1sen!2sin" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container section-4 pt-4 pb-4" id="contact">
+            <div class="row gx-3 gy-3">
+                <div class="col-md-6">
+                    <div class="content-sec">
+                        <h3 class="mb-3">Let’s Discuss Your Next Move</h3>
+                        <p>Have Questions? We’re here to help! Whether you want to learn more about the properties available at Al Jada Downtown or need assistance with your home search, our team is ready to provide you with the information you need.</p>
+                        <p>Discover the vibrant lifestyle awaiting you in Aljada Downtown, Sharjah’s most dynamic and fast-growing community. Whether you're interested in investing in premium residential units, exploring retail opportunities, or simply want to know more about the amenities and future developments in this thriving area, our team is here to assist you.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+<form class="form-control-main" action="">
+    <h3>Reach Out To Us!</h3>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Name</label>
+  </div>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Email</label>
+  </div>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Phone</label>
+  </div>
+  <button class="submit-btn">Submit Request</button>
+</form>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            const txts=document.querySelector(".animate-text").children,
+                  txtsLen=txts.length;
+              let index=0;
+             const textInTimer=2000,
+                   textOutTimer=2000;
+
+            function animateText() {
+               for(let i=0; i<txtsLen; i++){
+                 txts[i].classList.remove("text-in","text-out");
+               }
+               txts[index].classList.add("text-in");
+
+               setTimeout(function(){
+                   txts[index].classList.add("text-out");
+               },textOutTimer)
+
+               setTimeout(function(){
+
+                 if(index == txtsLen-1){
+                     index=0;
+                   }
+                  else{
+                      index++;
+                    }
+                   animateText();
+               },textInTimer);
+            }
+
+            window.onload=animateText;
+
+   </script>
+       <script>
+        var btn = document.querySelector('.toggle');
+        var btnst = true;
+        var sidebar = document.getElementById('sidebar');
+        var links = sidebar.querySelectorAll('a');
+        
+        btn.onclick = function() {
+          toggleSidebar();
+        };
+        
+        links.forEach(function(link) {
+          link.onclick = function() {
+            if (!btnst) { 
+              toggleSidebar();
+            }
+          };
+        });
+        
+        function toggleSidebar() {
+          if(btnst) {
+            document.querySelector('.toggle span').classList.add('toggle');
+            sidebar.classList.add('sidebarshow');
+            btnst = false;
+          } else {
+            document.querySelector('.toggle span').classList.remove('toggle');
+            sidebar.classList.remove('sidebarshow');
+            btnst = true;
+          }
+        }
+        </script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
