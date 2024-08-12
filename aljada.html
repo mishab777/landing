@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Al Jada</title>
-    <link rel="shortcut icon" href="img/visionx-3.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/visionx-3.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -244,6 +244,91 @@
     margin-right: 8px;
     color: #F09819;
 }
+.section-4 h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+.contact-form{
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/* From Uiverse.io by VitorBaraoDias */ 
+.form-control-main {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  border-radius: 8px;
+}
+.title {
+  font-size: 28px;
+  font-weight: 800;
+}
+.input-field {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  margin-top: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  height: 45px;
+  border: 1.5px solid #ecedec;
+  background: transparent;
+  padding-left: 10px;
+}
+.input:focus {
+  border: 1.5px solid #2d79f3;
+}
+.input-field .label {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.input-field .input:focus ~ .label,
+.input-field .input:valid ~ .label {
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  color: #2d79f3;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.submit-btn {
+  margin-top: 30px;
+  height: 55px;
+  background: #f2f2f2;
+  border-radius: 11px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #363636 0%, #1b1b1b 50%, #000000 100%);
+  box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 0px #000000;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #0000003a;
+}
+.section-4 p{
+    font-weight: 500;
+}
+
 @media(min-width:320px) and (max-width:480px){
     .bg-video-container {
   position: relative;
@@ -269,6 +354,28 @@
         font-size: 25px;
     }
 }
+.chat-box{
+    width: 220px;
+    height: 50px;
+    background-color: #25D366;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 999;
+}
+.chat-box a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+.chat-box a i{
+    margin-right: 10px;
+}
 </style>
 </head>
 <body>
@@ -276,6 +383,10 @@
     <div class="navbar">
         <img src="img/visionx-3.png" alt="">
     </div>
+
+<div class="chat-box">
+    <a href="https://wa.me/+971585959770"><i class="fa-brands fa-whatsapp"></i>Chat With Expert</a>
+</div>
 
     <div class="bg-video-container">
         <video class="bg-video" autoplay muted loop>
@@ -298,21 +409,21 @@
                     <div class="card-property">
                         <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2023/05/Rove-home-category-490x220.jpg" alt="">
                         <span>Rove Serviced Apartments</span>
-                        <a href="">Know More</a>
+                        <a href="#contact">Know More</a>
                     </div>
                 </div>
                 <div class="col-md-4">
                      <div class="card-property">
                         <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2023/12/il-teatro-490x220.jpg" alt="">
                         <span>il Teatro Residences at AlJada</span>
-                        <a href="">Know More</a>
+                        <a href="#contact">Know More</a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card-property">
                         <img class="mb-2" src="https://www.arada.com/wp-content/uploads/2022/08/sokoon-490x220.jpg" alt="">
                         <span>Sokoon at AlJada</span>
-                        <a href="">Know More</a>
+                        <a href="#contact">Know More</a>
                     </div>
                 </div>
             </div>
@@ -395,7 +506,39 @@
             <h3 class="mb-3">Explore Aljada: Your Guide to Sharjah's Premier Urban Community</h3>
             <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115410.49297430391!2d55.39187427128389!3d25.318381794133007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3e5f5f5cc51ce01b%3A0x28942edbf276e66!2sAljada%20Discovery%20Centre%20Aljada%20-%20Muwaileh%20Commercial%20-%20Sharjah%20-%20United%20Arab%20Emirates!3m2!1d25.3184047!2d55.4742758!5e0!3m2!1sen!2sin!4v1723291206556!5m2!1sen!2sin" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <div class="container section-4 pt-4 pb-4" id="contact">
+            <div class="row gx-3 gy-3">
+                <div class="col-md-6">
+                    <div class="content-sec">
+                        <h3 class="mb-3">Let’s Discuss Your Next Move</h3>
+                        <p>Have Questions? We’re here to help! Whether you want to learn more about the properties available at Al Jada Downtown or need assistance with your home search, our team is ready to provide you with the information you need.</p>
+                        <p>Discover the vibrant lifestyle awaiting you in Aljada Downtown, Sharjah’s most dynamic and fast-growing community. Whether you're interested in investing in premium residential units, exploring retail opportunities, or simply want to know more about the amenities and future developments in this thriving area, our team is here to assist you.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+<form class="form-control-main" action="">
+    <h3>Reach Out To Us!</h3>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Name</label>
+  </div>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Email</label>
+  </div>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Phone</label>
+  </div>
+  <button class="submit-btn">Submit Request</button>
+</form>
 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
         <script>
             const txts=document.querySelector(".animate-text").children,
                   txtsLen=txts.length;
