@@ -3,12 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Shoreline</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Al Jada</title>
     <link rel="shortcut icon" href="img/visionx-3.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,595 +12,347 @@
         *{
             font-family: "Montserrat", sans-serif;
         }
-        .navbar{
-            width: 100%;
-            height: 60px;
-            background-color: #fff;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+        .bg-video-container {
+         position: relative;
+        width: 100%;
+        margin:auto;
         }
-        .nav-logo{
-            width: 20%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .bg-video {
+         width: 100%;
+         height: auto;
+         object-fit: contain;
         }
-        .nav-logo img{
-            width: auto;
-            height: 100%;
-            object-fit: contain;
-        }
-        .nav-links{
-            width: 60%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        .nav-links a{
-            text-decoration: none;
-            color: black;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .nav-links a:focus{
-            border-bottom: 2px solid black;
-            padding-bottom: 2px;
-        }
-        .hero{
-            background-image:linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)), url(https://www.arada.com/wp-content/uploads/2022/05/header-1-e1653744980691.jpg);
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-        }
-        .hero-content{
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            flex-direction: column;
-        }
-        .hero-content h1{
-            font-size: 40px;
-            font-weight: 600;
-            color: black;
-            background-color: #fff;
-            padding: 5px;
-            transition: all 0.4s ease;
-        }
-        .hero-content h3{
-            font-size: 30px;
-            color: #fff;
-        }
-        .hero-content h4{
-            color: #fff;
-        }
-        .hero-content h2{
-            font-weight: 600;
-            font-size: 30px;
-            text-transform: uppercase;
-            background-color: #D0AD6A;
-            color: #fff;
-            transition: all 0.4s ease;
-            padding: 10px;
-        }
-        .hero-content h1:hover{
-            background-color: black;
-            color: #fff;
-            cursor: pointer;
-        }
-        .hero-content h2:hover{
-            background-color: #fff;
-            color: #D0AD6A;
-            cursor: pointer;
-        }
-        .hero-content a{
-            text-decoration: none;
-        }
-        .hero-content button{
-            background-color: black;
-            color: #fff;
-            border: hidden;
-            border-radius: 10px;
-            width: 180px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            height: 40px;
-            transition: all 0.5s ease;
-            font-weight: 600;
-        }
-        .hero-content button i{
-            display: none;
-        }
-        .hero-content button:hover i{
-            display: block;
-        }
-        /* From Uiverse.io by nathann09 */ 
-.form {
-  background-color: #fff;
-  display: block;
-  padding: 1rem;
-  max-width: 350px;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        .home-section-one{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: rgb(0,0,0,0.4);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .home-section-one-content{
+        height:100%;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-section-one h1{
+        font-size: 60px;
+        /*color: #CCAB4D;*/
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        transition: 0.4s ease;
+        letter-spacing:5px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .home-section-one p{
+        margin:0;
+	overflow: hidden;
 }
+.home-section-one p span{
+    font-size: 45px;
+    color:#fff;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 46px;
+    text-align:center;
+    display: none;
+    }
+.home-section-one p span.text-in{
+	display: block;
+	animation: textIn .4s ease;
+}
+.home-section-one p span.text-out{
+	animation: textOut .4s ease;
+}
+@keyframes textIn{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+@keyframes textOut{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
 
-.form-title {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-  text-align: center;
-  color: #000;
+	}
 }
-
-.input-container {
-  position: relative;
-}
-
-.input-container input, .form button {
-  outline: none;
-  border: 1px solid #e5e7eb;
-  margin: 8px 0;
-}
-
-.input-container input {
-  background-color: #fff;
-  height: 40px;
-  font-size: 0.875rem;
-  padding: 10px;
-  width: 100%;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-
-.submit {
-  display: block;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  background-color: #D0AD6A;
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  width: 100%;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-}
-
-.signup-link {
-  color: #6B7280;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  text-align: center;
-}
-
-.signup-link a {
-  text-decoration: underline;
-}
-.hero-form{
+.navbar{
     width: 100%;
-    height: 100vh;
+    height: 80px;
+    background: transparent;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
 }
- </style>
- </head>
-<body>
+.card-property{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid rgb(205, 205, 205);
+    position: relative;
+    z-index: 3;
+}
+.card-property img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-property span{
+    font-size: 16px;
+    color: black;
+}
+.card-property a{
+    text-decoration: underline;
+    font-weight: 600;
+    color: black;
+    font-size: 16px;
+    align-self: flex-end;    
+}
+.section-2{
+    margin-top: -120px;
+    position: relative;
+}
+/* From Uiverse.io by mrhyddenn */ 
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    <div class="navbar">
-        <div class="nav-logo">
-            <img src="img/visionx-3.png" alt="">
-        </div>
-        <div class="nav-links">
-            <a href="#price">Price</a>
-            <a href="#floor">Floor Plan</a>
-            <a href="#amenities">Amenities</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#location">Location</a>
-            <a href="#virtual">Virtual Tour</a>
-        </div>
-        <div class="navbar-mobile">
-            <button type="button" class="toggle" id="toggle">
-                <span></span>
-            </button>
-            <div class="sidebar" id='sidebar'>
-                <a href="" class="logo-sidebar"><img src="img/visionx.png" alt="" height="50" width="auto"></a>
-                <ul>
-                  <li><a href="#price">PRICE</a></li>
-                   <li><a href="#floor">FLOOR PLAN</a></li>
-                    <li><a href="#amenities">AMENITIES</a></li>
-                    <li><a href="#gallery">GALLERY</a></li>
-                    <li><a href="#location">LOCATION</a></li>
-                    <li><a href="#virtual">VIRTUAL TOUR</a></li>
-                </ul>
-              </div>
-            </div>
-    </div>
-    <div class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="hero-content">
-                        <h1 class="mb-2">BOOKING OPEN</h1>
-                        <h3>Masaar By Arada</h3>
-                        <h4>At Sharjah</h4>
-                        <h2 class="mb-3 mt-2">Book Now by Paying 5%</h2>
-                        <h3 class="mb-3">Starting Price AED 2.8 M</h3>
-                        <button id="open-btn">Register Now<i class="fa-solid fa-arrow-right-long"></i></button>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                <div class="hero-form">
+.card_box {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all .3s;
+}
 
-    <form class="form">
-       <p class="form-title">Register here and Avail the Best Offers!!</p>
-        <div class="input-container">
-          <input type="email" placeholder="Enter Name">
-      </div>
-      <div class="input-container">
-          <input type="text" placeholder="Enter Email">
-        </div>
-        <div class="input-container">
-            <input type="text" placeholder="Enter Phone Number">
-          </div>
-         <button type="submit" class="submit">
-        Pre Register Now
-      </button>
-   </form>
+.card_box:hover {
+  transform: scale(0.9);
+}
 
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <style>
-        .about{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-        }
-        .about h1{
-            font-weight: 600;
-            font-size: 40px;
-        }
-        .about h3{
-            font-size: 25px;
-        }
-        .about-image{
-            width: 100%;
-            height: 100%;
-        }
-        .about-image img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .about button{
-            border: hidden;
-            background-color: #fff;
-            color: #D0AD6A;
-            border: 1px solid #D0AD6A;
-            font-weight: 500;
-            padding: 10px;
-        }
-        .about button i{
-            margin-right: 10px;
-        }
-        .amenities{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-        .amenities h1{
-            font-weight: 600;
-            font-size: 40px;
-        }
-        .amenity-card{
-            height: auto;
-            padding: 10px;
-            width: 100%;
-            height: auto;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        }
-        .amenity-card img{
-            width: 60px;
-            height: 60px;
-            margin-bottom: 10px;
-        }
-        .section-amenity{
-            width: 100%;
-            background-color: #F4F4F4;
-            height: auto;
-        }
-        .amenity-card h3{
-            text-align: center;
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-    </style>
-    <div class="container pt-4 pb-4">
-        <div class="row gy-3">
-            <div class="col-md-6">
-                <div class="about">
-                    <h1>About Masaar</h1>
-                    <h3>At Sharjah</h3>
-                    <p>Masaar is a residential sanctuary formed by eight gated communities, with abundant green space and every necessity close at hand.</p>
-                    <p>Look around, you’ll soon learn something. Nature reveals what true harmony looks like.Masaar helps you strike a healthy balance in your own life – between work and play, family and “me” time,urban convenience and natural beauty.Remember life offline? Find a quiet corner for a chatwith friends and family. Need to get away from it all? Pedal your way across 12 kilometres of gorgeous cycling paths that wend their way through spacious woodland.</p>
-                    <button id="open-btn-brochure"><i class="fa-solid fa-file-arrow-down"></i>Request to Download Brochure</button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="about-image">
-                    <img src="https://www.arabianbusiness.com/cloud/2024/01/17/Masaar.jpg" alt="">
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <div class="section-amenity pt-3 pb-3" id="amenities">
-    <div class="container pt-4 pb-4">
-        <div class="row gx-3 gy-3">
-            <div class="col-md-4">
-                <div class="amenities">
-                    <h1>Amenities</h1>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="row gx-2 gy-2">
-                    <div class="col-md-3">
-                        <div class="amenity-card">
-                            <img src="img/nest/gym.svg" alt="">
-                            <h3>GYM</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="amenity-card">
-                            <img src="img/nest/tabletennis.svg" alt="">
-                            <h3>TABLE tennis</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="amenity-card">
-                            <img src="img/nest/Garden.svg" alt="">
-                            <h3>viewing deck</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="amenity-card">
-                            <img src="img/nest/BADMINTONCOURT.svg" alt="">
-                            <h3>badminton court</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="amenity-card">
-                            <img src="img/nest/Kidsplaying.svg" alt="">
-                            <h3>kids play area</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="amenity-card">
-                            <img src="img/nest/swm.svg" alt="">
-                            <h3>swimming pool</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="amenity-card">
-                            <img src="img/nest/Yoga.svg" alt="">
-                            <h3>yoga</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="amenity-card">
-                            <img src="img/nest/MULTIPURPOSEHALL.svg" alt="">
-                            <h3>MULTIPURPOSEHALL</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<style>
-    .section-price h3{
-        font-size: 40px;
-        font-weight: 600;
-    }
-    .price-card{
-        width: 100%;
-        height: 200px;
-        padding: 15px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-        justify-content: center;
-    }
-    .price-card h3{
-        font-size: 20px;
-        text-align: center;
-        font-weight: 600;
-    }
-    .price-card p{
-        font-size: 16px;
-        font-weight: 500;
-    }
-    .price-card button{
-        width: 100%;
-        height: 40px;
-        font-weight: 600;
-        border: hidden;
-        background-color: #D0AD6A;
-        color: #fff;
-    }
-    .section-floor h3{
-        font-size: 40px;
-        font-weight: 600;
-    }
-    .plan-card{
-        width: 100%;
-        height: 200px;
-        background-image:linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(https://developer-sales-office.com/Masaar-by-Arada/assets/img/floor_2.jpg);
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        flex-direction: column;
-    }
-    .plan-card h3{
-        color: #fff;
-        font-size: 20px;
-        font-weight: 600;
-    }
-    .plan-card button{
-        width: 150px;
-        height: 40px;
-        background-color: white;
-        color: black;
-        border: hidden;
-        border-radius: 20px;
-        font-weight: 500;
-    }
-    .section-virtual{
-        background-color: #D0AD6A;
-        height: auto;
-        width: 100%;
-    }
-</style>
-<div class="container section-price pt-4 pb-4" id="price">
-    <h3 class="mb-4">Price</h3>
-    <div class="row gx-3 gy-3">
-        <div class="col-md-3">
-            <div class="price-card">
-                <h3 class="mb-3">4 BR Townhouses</h3>
-                <p class="mb-3">1817 to 3181 Sq.ft.</p>
-                <button id="open-btn-price">Request For Price</button>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="price-card">
-                <h3 class="mb-3">4 BR Villa</h3>
-                <p class="mb-3">3356 to 6855 Sq.ft.</p>
-                <button id="open-btn-price-2">Request For Price</button>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="price-card">
-                <h3 class="mb-3">5 BR Villa</h3>
-                <p class="mb-3">6223 to 7664 Sq.ft.</p>
-                <button id="open-btn-price-3">Request For Price</button>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="price-card">
-                <h3 class="mb-3">6 BR Villa</h3>
-                <p class="mb-3">9235 Sq.ft.</p>
-                <button id="open-btn-price-4">Request For Price</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container section-floor pt-4 pb-4" id="floor">
-    <h3 class="mb-4">Site & Floor Plan</h3>
-    <div class="row gx-4 gy-3">
-        <div class="col-md-4">
-        <div class="plan-card">
-            <h3 class="mb-3">4 BR</h3>
-            <button>Enquire Now</button>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="plan-card">
-                <h3 class="mb-3">5 BR</h3>
-                <button>Enquire Now</button>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="plan-card">
-                <h3 class="mb-3">6 BR</h3>
-                <button>Enquire Now</button>
-            </div>
-        </div>
-    </div>
-</div>
-<style>
-    .section-virtual h3{
-        font-weight: 600;
-        color: #fff;
-    }
-    .section-virtual p{
-        color: #fff;
-    }
-    .section-virtual img{
-        width: auto;
-        height: 200px;
-    }
-    .section-virtual button{
-        background-color: #fff;
-        color: black;
-        height: 40px;
-        width: 250px;
-        border: hidden;
-        border-radius: 5px;
-    }    
+.card_box span {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_box h3{
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+}
+.card_box h5{
+    font-size: 18px;
+    color: #fff;
+}
+.card_box span::before {
+  content: 'AL JADA';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+}
+
+.card_box span::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  box-shadow: 140px -140px #cc3f47;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+.section-3 h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+.section-3 img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.section-3-content h3{
+    font-size: 30px;
+}
+.section-3-content p{
+    font-weight: 600;
+    font-size: 15px;
+}
+.section-3-content-2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.section-3-content-2 li{
+    width: 45%;
+    margin-bottom: 5px;
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+.section-3-content-2 li i{
+    margin-right: 8px;
+    color: #F09819;
+}
+.section-4 h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+.contact-form{
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/* From Uiverse.io by VitorBaraoDias */ 
+.form-control-main {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  border-radius: 8px;
+}
+.title {
+  font-size: 28px;
+  font-weight: 800;
+}
+.input-field {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  margin-top: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  height: 45px;
+  border: 1.5px solid #ecedec;
+  background: transparent;
+  padding-left: 10px;
+}
+.input:focus {
+  border: 1.5px solid #2d79f3;
+}
+.input-field .label {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.input-field .input:focus ~ .label,
+.input-field .input:valid ~ .label {
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  color: #2d79f3;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.submit-btn {
+  margin-top: 30px;
+  height: 55px;
+  background: #f2f2f2;
+  border-radius: 11px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #363636 0%, #1b1b1b 50%, #000000 100%);
+  box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 0px #000000;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #0000003a;
+}
+.section-4 p{
+    font-weight: 500;
+}
+.navbar-mobile{
+    display: none;
+}
+.logo-desktop{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+.navbar-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+}
+.navbar-links a{
+    text-decoration: none;
+    color: black;
+}
+@media(min-width:320px) and (max-width:480px){
     .navbar-mobile{
-        display: none;
-    }
-    @media(min-width:320px) and (max-width:480px){
-        .nav-logo{
-            width: 30%;
-        }
-        .section-virtual img{
-            width: 100%;
-        }
-        .hero{
-            height: 80vh;
-        }
-        .hero-form{
-            display: none;
-        }
-        .nav-links{
-            display: none;
-        }
-        .hero-content h1{
-            font-size: 30px;
-        }
-        .hero-content h2{
-            font-size: 20px;
-        }
-        .hero-content h3{
-            font-size: 25px;
-        }
-        .navbar-mobile{
         width: 20%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #toggle {
+    button {
   background:transparent;
   border:none;
   width:30px;
@@ -756,140 +503,570 @@
 .navbar-links{
     display: none;
 }
-    }
-</style>
-<div class="section-virtual pt-4 pb-4" id="virtual">
-    <div class="container pt-3 pb-3">
-        <div class="row gx-3 gy-3">
-            <div class="col-md-6">
-        <h3 class="mb-4">Take a 360 Degree Tour Of The Project</h3>
-        <img class="mb-3" src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/360view.jpg" alt="">
-        <p>Schedule A Virtual Tour With Our Expert</p>
-        <button id="open-video">Schedule A Virtual Tour</button>
-    </div>
-    <div class="col-md-6">
-        <h3 class="mb-4">Receive A Digital Copy Of Our Brochure</h3>
-        <img class="mb-3" src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/DigitalCopy.jpg" alt="">
-        <p>And Learn More About Our Spacious Residences</p>
-        <button>Request Here</button>
-    </div>
-    </div>
-</div>
-</div>
-<style>
-    .section-location h3{
+    .home-section-one-content h1{
         font-size: 40px;
-        font-weight: 600;
+        letter-spacing: 0px;
     }
-    .section-location li{
-        font-size: 18px;
-        list-style-type: none;
-        margin-bottom:10px;
+    .home-section-one-content p span{
+        font-size: 25px;
     }
-    .section-location li i{
-        margin-right: 10px;
-        color: #D0AD6A;
-    }
-    .section-location li span{
-        font-weight: 600;
-    }
+}
+.chat-box{
+    width: 220px;
+    height: 50px;
+    background-color: #25D366;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 999;
+}
+.chat-box a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+.chat-box a i{
+    margin-right: 10px;
+}
 </style>
-<div class="container section-location pt-4 pb-4" id="location">
-    <h3 class="mb-3">Location</h3>
-    <div class="row gx-4 gy-3">
-        <div class="col-md-6">
-            <h4>Map</h4>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2748.5423072840913!2d55.59672900000001!3d25.259054!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef58dc72d75fb17%3A0x860b2a2f9e5da5e0!2sMasaar%20by%20Arada!5e1!3m2!1sen!2sin!4v1723891462121!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="col-md-6">
-            <h4 class="mb-3">Connectivity</h4>
-            <li><i class="fa-solid fa-location-dot"></i><span>2 Minutes</span> from Tilal Mall & Sharjah Mosque</li>
-            <li><i class="fa-solid fa-location-dot"></i><span>2 Mins </span>from Sharjah Botinical Garden & Sharjah Convention center</li>
-            <li><i class="fa-solid fa-location-dot"></i><span> 15 Mins </span>from Sharjah International Airport Free Zone (SAIF)</li>
-            <li><i class="fa-solid fa-location-dot"></i><span>20 Mins </span>from Dubai International Airport & Sharjah Corniche</li>
-            <li><i class="fa-solid fa-location-dot"></i><span>20 Mins </span>from Aljada</li>
-            <li><i class="fa-solid fa-location-dot"></i>Easy Access to Emirates Road, Mleiha Road Khorfakan Road</li>
-        </div>
-    </div>
-</div>
-<style>
-    .gallery h3{
-        font-size: 40px;
-        font-weight: 600;
-    }
-    .gallery img{
-        cursor: zoom-in;
-    }
-    .gallery-left{
-        width: 100%;
-        height: 350px;
-    }
-    .gallery-left img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .gallery-right{
-        height: 150px;
-        width: 100%;
-    }
-    .gallery-right img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-</style>
-<div class="container gallery pt-4 pb-4" id="gallery">
-    <h3 class="mb-3">Gallery</h3>
-    <div class="row gx-3 gy-3">
-        <div class="col-md-8">
-            <div class="gallery-left">
-                <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery6.jpg" alt="">
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="row gy-3 gx-3">
-                <div class="col-md-6">
-                    <div class="gallery-right">
-                        <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery5.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="gallery-right">
-                        <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="gallery-right">
-                        <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="gallery-right">
-                        <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
+</head>
+<body>
 
+    <div class="navbar">
+        <img src="img/visionx-3.png" class="logo-desktop" alt="">
+        <div class="navbar-links">
+            <a href="aljadanest.html">Nest</a>
+            <a href="aljadaeast.html">East Boulevard</a>
+            <a href="aljadamadar.html">Madar</a>
+        </div>
+        <div class="navbar-mobile">
+        <button type="button" class="toggle" id="toggle">
+            <span></span>
+        </button>
+        <div class="sidebar" id='sidebar'>
+            <a href="" class="logo-sidebar"><img src="img/visionx.png" alt="" height="50" width="auto"></a>
+            <ul>
+              <li><a href="aljadanest.html">Nest</a></li>
+               <li><a href="aljadaeast.html">East Boulevard</a></li>
+                <li><a href="aljadamadar.html">Madar</a></li>
+            </ul>
+          </div>
         </div>
     </div>
+
+<div class="chat-box">
+    <a href="https://wa.me/+971585959770"><i class="fa-brands fa-whatsapp"></i>Chat With Expert</a>
 </div>
-<style>
-    .section-base h3{
-        font-size: 40px;
-        font-weight: 600;
-    }
-</style>
-<div class="section-base">
-    <div class="container pt-4 pb-4">
-        <h3 class="mb-3">About The Developer</h3>
-        <p>In September 2017, we launched our second project, Aljada. Located on the last large plot of undeveloped land in Sharjah, Aljada is the Emirate’s largest ever megaproject and a fully self-sustained city within a city. It’s a destination where everything is in reach, and where you can enjoy a stress-free active lifestyle. From apartments to townhouses and villas, Aljada has homes to suit every budget.</p>
-        <p>In March 2017, we launched our first community, Nasma Residences. Located in the Al Tay suburb in the heart of New Sharjah, Nasma Residences has nearly 1,000 villas and townhouses in a community that is ideally designed to suit your family. We have already started delivering homes and will complete the project in 2020.</p>
-        <p>In September 2017, we launched our second project, Aljada. Located on the last large plot of undeveloped land in Sharjah, Aljada is the Emirate’s largest ever megaproject and a fully self-sustained city within a city. It’s a destination where everything is in reach, and where you can enjoy a stress-free active lifestyle. From apartments to townhouses and villas, Aljada has homes to suit every budget.</p>
+
+    <div class="bg-video-container">
+        <video class="bg-video" autoplay muted loop>
+         <source src="img/Aljada.mp4"/>
+         </video>
+        <div class="home-section-one">
+            <div class="home-section-one-content">
+                <h1 class="mb-3">WHY CHOOSE AL JADA?</h1>
+               <p class="animate-text">
+                <span>Modern Architecture</span>
+                <span>Family-Friendly Environment</span>
+                <span>Investment Potential</span>
+             </p>
+             </div>
+        </div>
+        </div>
+        <div class="section-projects pt-4 pb-4">
+        <div class="container section-project mb-4 p-4">
+            <div class="row gx-3 gy-3">
+              <div class="col-md-6">
+                <div class="project-details">
+                  <h1>NESBA 2</h1>
+                  <h3 class="mb-3"><span>Staring From</span><br>AED 888,000</h3>
+                  <h4 class="mb-3">Property Type - Apartment</h4>
+                  <p>At Nesba, a variety of apartment sizes and floorplans give you the flexibility to choose the lifestyle you want. Ranging from cosy one-bedroom apartments to three-bedroom family homes, all residences at Nesba include smart home features as standard, as well as a kitchen cooker, hood and washer/drier from a premium manufacturer.</p>
+                  <button id="open-btn">Submit Request</button>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="property-image" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(https://www.arada.com/wp-content/uploads/2023/05/Rove-landing-page_nasaq.jpg);">
+                  <div class="base">
+                    <h3>June-2026</h3>
+                    <span>Handover</span>
+                  </div>
+                  <div class="base">
+                    <h3>45/55</h3>
+                    <span>Payment Plan</span>
+                  </div>
+                  <div class="base">
+                    <h3>5%</h3>
+                    <span>Down Payment</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container section-project mb-4 p-4">
+          <div class="row gx-3 gy-3">
+            <div class="col-md-6">
+              <div class="project-details">
+                <h1>IL Teatro Residences</h1>
+                <h3 class="mb-3"><span>Staring From</span><br>AED 987,000</h3>
+                <h4 class="mb-3">Property Type - Apartment</h4>
+                <p>IL Teatro Residences 1 at Aljada, Sharjah is crafted by Arada Developer to immerse in art and design comprising 1, 2 & 3-bedroom apartments and lofts. Nestled across a 07-storey low-rise facade, this architectural marvel stands as a testament to the creative vision of renowned Japanese architect Tadao Ando</p>
+                <button id="open-btn-2">Submit Request</button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="property-image" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(https://manage.tanamiproperties.com/Banner/1481/Large/12725.webp);">
+                <div class="base">
+                  <h3>2026</h3>
+                  <span>Handover</span>
+                </div>
+                <div class="base">
+                  <h3>40/60</h3>
+                  <span>Payment Plan</span>
+                </div>
+                <div class="base">
+                  <h3>5%</h3>
+                  <span>Down Payment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="container section-project p-4">
+        <div class="row gx-3 gy-3">
+          <div class="col-md-6">
+            <div class="project-details">
+              <h1>Rove Home</h1>
+              <h3 class="mb-3"><span>Staring From</span><br>AED 1,066,000</h3>
+              <h4 class="mb-3">Property Type - Villas</h4>
+              <p>At Nesba, a variety of apartment sizes and floorplans give you the flexibility to choose the lifestyle you want. Ranging from cosy one-bedroom apartments to three-bedroom family homes, all residences at Nesba include smart home features as standard, as well as a kitchen cooker, hood and washer/drier from a premium manufacturer.</p>
+              <button id="open-btn-3">Submit Request</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="property-image" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(https://manage.tanamiproperties.com/Banner/1292/Large/10005.webp);">
+              <div class="base">
+                <h3>Dec-2026</h3>
+                <span>Handover</span>
+              </div>
+              <div class="base">
+                <h3>45/55</h3>
+                <span>Payment Plan</span>
+              </div>
+              <div class="base">
+                <h3>5%</h3>
+                <span>Down Payment</span>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-</div>
-<style>
-         .popup{
+      </div>
+        <style>
+          .base{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+          }
+          .base h3{
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+          }
+          .base span{
+            color: #fff;
+          }
+          .section-project{
+            background-color: #fff;
+            border-radius: 10px;
+          }
+          .project-details{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+          }
+          .project-details h1{
+            font-size: 40px;
+            font-weight: 600;
+          }
+          .project-details h3{
+            font-size: 30px;
+            font-weight: 500;
+          }
+          .project-details h3 span{
+            font-size: 20px;
+          }
+          .project-details h4{
+            font-size: 20px;
+            font-weight: 700;
+          }
+          .project-details p{
+            font-size: 16px;
+          }
+          .property-image{
+            padding: 10px;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-evenly;
+          }
+          .project-details button{
+            background-color: #D0AD6A;
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #fff;
+            border: hidden;
+          }
+          .section-projects{
+            height: auto;
+            width: 100%;
+            background-color: #F4F4F4;
+          }
+          .desc-card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 200px;
+            border: 2px solid #cfa14d;
+            background-color: #fff;
+            border-radius: 10px;
+          }
+          .desc-card h3{
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+}
+.desc-card h5{
+    font-size: 18px;
+    color: black;
+}
+        </style>
+        <div class="container pt-4 pb-4">
+            <div class="row gx-4 gy-3">
+                <div class="col-md-3">
+                  <div class="desc-card">
+                    <h5>Green space</h5>
+                    <h3>250,000 m2</h3>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Green space</h5>
+                            <h3>250,000 m2</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Residential units</h5>
+                            <h3>25,000</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="container-box">
+                        <div class="card_box">
+                            <span></span>
+                            <h5>Family entertainment</h5>
+                            <h3>1.9M sq.ft.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container section-3 pt-4 pb-4">
+            <h3 class="mb-4">A self-sustained community</h3>
+            <div class="row gx-0">
+                <div class="col-md-6">
+                    <img src="https://fnst.axflare.com/community/JPEG/SOIHuYsAeq.jpeg" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="section-3-content p-3">
+                        <h3 class="mb-3">The Downtown of new Sharjah.</h3>
+                        <p>Aljada Downtown is Sharjah's most dynamic urban district, offering a blend of modern living, shopping, dining, and entertainment. As the heart of the Aljada development, it promises a lifestyle that combines luxury with convenience. Whether you're exploring the beautifully landscaped parks, indulging in diverse culinary delights, or shopping at the high-end boutiques, Aljada Downtown provides an unmatched experience for residents and visitors alike. </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                       <div class="section-3-content-2 p-3">
+                        <li><i class="fa-solid fa-circle"></i>24 million sqft development</li>
+                        <li><i class="fa-solid fa-circle"></i>4.4km retail boulevard length</li>
+                        <li><i class="fa-solid fa-circle"></i>25,000 residential units</li>
+                        <li><i class="fa-solid fa-circle"></i>4 hotels</li>
+                        <li><i class="fa-solid fa-circle"></i>250,000 sqm green space</li>
+                        <li><i class="fa-solid fa-circle"></i>3 schools</li>
+                        <li><i class="fa-solid fa-circle"></i>500,000 sqm prime office space</li>
+                        <li><i class="fa-solid fa-circle"></i>1 education district</li>
+                        <li><i class="fa-solid fa-circle"></i>165,000 sqm retail Leasable space</li>
+                        <li><i class="fa-solid fa-circle"></i>7 mins from Sharjah airport</li>
+                        <li><i class="fa-solid fa-circle"></i>20 mins from Dubai International Airport</li>
+                        <li><i class="fa-solid fa-circle"></i>1.9 million sqft family entertainment complex</li>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://media.licdn.com/dms/image/D4D12AQEKa5Tp1CLnDg/article-inline_image-shrink_1000_1488/0/1703330414216?e=1727913600&v=beta&t=xqi1bR2oxwW0Emz-PN-p5VM436A9Mlzgfbytx1dg9lc" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container section-3 pt-4 pb-4">
+            <h3 class="mb-3">Explore Aljada: Your Guide to Sharjah's Premier Urban Community</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d115410.49297430391!2d55.39187427128389!3d25.318381794133007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3e5f5f5cc51ce01b%3A0x28942edbf276e66!2sAljada%20Discovery%20Centre%20Aljada%20-%20Muwaileh%20Commercial%20-%20Sharjah%20-%20United%20Arab%20Emirates!3m2!1d25.3184047!2d55.4742758!5e0!3m2!1sen!2sin!4v1723291206556!5m2!1sen!2sin" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container section-4 pt-4 pb-4" id="contact">
+            <div class="row gx-3 gy-3">
+                <div class="col-md-6">
+                    <div class="content-sec">
+                        <h3 class="mb-3">Let’s Discuss Your Next Move</h3>
+                        <p>Have Questions? We’re here to help! Whether you want to learn more about the properties available at Al Jada Downtown or need assistance with your home search, our team is ready to provide you with the information you need.</p>
+                        <p>Discover the vibrant lifestyle awaiting you in Aljada Downtown, Sharjah’s most dynamic and fast-growing community. Whether you're interested in investing in premium residential units, exploring retail opportunities, or simply want to know more about the amenities and future developments in this thriving area, our team is here to assist you.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+<form class="form-control-main" action="">
+    <h3>Reach Out To Us!</h3>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Name</label>
+  </div>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Email</label>
+  </div>
+  <div class="input-field">
+    <input required="" class="input" type="text" />
+    <label class="label" for="input">Enter Phone</label>
+  </div>
+  <button class="submit-btn">Submit Request</button>
+</form>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+          <button class="btn btn-dark" id="open-btn">open</button>
+        </div>
+         <div class="popup" id="popup-main">
+      <button class="popup-close-button" id="close">&times;</button>
+      <div class="popup-content" id="popup-content-id">
+          <h3 class="text-light lap-register mb-3">Register Your Interest Now!</h3>
+    <form class="contact-form-popup " id="contact-form-3" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validatecontact3(event)">
+                    <input type="hidden" name="access_key" value="ab22015f-fdf2-4933-83c1-34115ecfb4e0">
+                <input type="hidden" name="subject" id="subject-register-3" value="Register Interest Request From Landing Page">
+        <div class="d-flex mb-3 flex-column">
+        <input type="text" name="Full name" id="fname-3" class="" placeholder="Full name*" >
+        <span class="error-message" id="fname-error-3"></span>
+        </div>
+        <div class="d-flex mb-3 flex-column">
+            <input type="hidden" id="countryCode-popup" name="CountryCode">
+        <input type="text" name="phone number" id="phone-3" class="" placeholder="Mobile number*" >
+        <span class="error-message" id="phone-error-3"></span>
+        </div>
+        <div class="d-flex flex-column mb-3">
+        <input type="text" name="email" id="email-3" class="" placeholder="Email*" >
+        <span class="error-message" id="email-error-3"></span>
+        </div>
+        <button type="submit" value="">ENQUIRE NOW</button>
+    </form>
+      </div>
+  </div>
+  <footer>
+    <div class="top_header">
+    <section>
+    <span><i class="fa-solid fa-location-dot"></i></span>
+    <span>Street, full address, Sharjah, UAE</span>
+    </section>
+    <section>
+    <span><i class="fa-solid fa-phone"></i></span>
+    <span>+971 58 595 9770</span>
+    </section>
+    <section>
+    <span><i class="fa-solid fa-envelope"></i></span>
+    <span>info@visionnexus.com</span>
+    </section>
+    </div>
+    <span class="border-shape"></span>
+    <div class="bottom_content">
+    <section>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </section>
+    <section>
+    <a href="#">Home</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">Contact Us</a>
+    </section>
+    </div>
+    <div class="copyright">
+    Copyright © 2024 visionnexus - All rights reserved 
+    </div>
+    </footer>
+  <style>
+    .border-shape {
+background: #ffbe00 none repeat scroll 0 0;
+color: #fff;
+display: block;
+height: 3px;
+left: 0;
+margin: 20px auto;
+position: relative;
+right: 0;
+text-align: center;
+top: 0;
+width: 80px;
+}
+
+.border-shape::before {
+background: #ffbe00 none repeat scroll 0 0;
+bottom: 0;
+content: "";
+height: 1px;
+left: 80px;
+margin: 0 auto;
+position: absolute;
+text-align: center;
+top: 1px;
+width: 100px;
+}
+
+.border-shape::after {
+background: #ffbe00 none repeat scroll 0 0;
+bottom: 0;
+content: "";
+height: 1px;
+margin: 0 auto;
+position: absolute;
+right: 80px;
+text-align: center;
+top: 1px;
+width: 100px;
+}
+
+/*FOOTER*/
+footer{
+width:100%;
+background-color:#121619;
+color:#fff;
+}
+footer a{
+  text-decoration: none;
+}
+.top_header{
+padding:2rem;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.top_header section{
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+}
+
+.top_header span{
+padding:0 1rem;
+}
+
+.top_header .fa{
+color:#ffbe00;
+font-size:35px;
+}
+
+footer .border-shape {
+width: 40%;
+}
+
+footer .border-shape::before {
+width: 100%;
+left:120px;
+}
+
+footer .border-shape::after {
+width: 100%;
+right:120px;
+}
+
+footer .bottom_content section{
+padding:1.5rem 2rem;
+display:flex;
+align-items:center;
+justify-content:Center;
+}
+
+.bottom_content a{
+margin:0 20px;
+color:rgba(255,255,255,0.7);
+transition:0.5s;
+}
+
+.bottom_content a:hover{
+color:rgba(255,255,255,1);
+}
+
+
+.copyright{
+padding:0.8em 0;
+background-color:#1e1e1e;
+text-align:center;
+color:rgba(255,255,255,0.7);
+font-size:12px;
+}
+
+
+
+@media (max-width:820px){
+.top_header{
+padding:1rem;
+display:block;
+}
+
+.top_header section{
+margin:40px 0;
+align-items:left;
+justify-content:left;
+}
+footer .bottom_content section{
+padding:1rem;
+display:block;
+}
+footer .bottom_content section a{
+padding:1rem;
+font-size:12px;
+margin:0 5px;
+display:inline-block;
+}
+}
+     .popup{
     background-color:black;
     width: 45%;
     position: fixed;
@@ -940,195 +1117,8 @@
     padding: 6%;
   }
 }
-.popup-price{
-    background-color:#c8c8c8;
-    width: 35%;
-    position: fixed;
-    transform: translate(-50%,-50%);
-    height: auto;
-    top: 50%;
-    left:50%;
-    padding:3%;
-    z-index: 100;
-    display: none;
-    text-align: center;
-}
-.popup-price h3{
-    color: #000000;
-    font-weight: 600;
-}
-.popup-close-button-price{
-    display: block;
-    position:absolute;
-    top:0;
-    right:0;
-    background-color: transparent;
-    font-size: 60px;
-    color: #cfa14d;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-.contact-form-popup-price input{
-  width: 100%;
-  height: 50px;
-  border: hidden;
-  outline: none;
-  border-bottom: 2px solid gray;
-  background:none;
-  color: black;
-  padding-left: 10px;
-  font-size: 14px;
-}
-.contact-form-popup-price button{
-  width: 100%;
-  background-color: #D0AD6A;
-  color: #fff;
-  border: hidden;
-  font-weight: 600;
-  height: 50px;
-}
-@media(min-width:320px) and (max-width:480px){
-  .popup-price{
-    width: 90%;
-    padding: 6%;
-  }
-}
-.popup-brochure{
-    background-color:black;
-    width: 45%;
-    position: fixed;
-    transform: translate(-50%,-50%);
-    height: auto;
-    top: 50%;
-    left:50%;
-    padding:3%;
-    z-index: 100;
-    border-radius: 8px;
-    font-family: "Poppins",sans-serif;
-    display: none;
-    text-align: center;
-}
-.popup-brochure h3{
-    color: #fff;
-}
-.popup-close-button-brochure{
-    display: block;
-    position:absolute;
-    top:0;
-    right:0;
-    background-color: transparent;
-    font-size: 40px;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-.contact-form-popup-brochure input{
-  width: 100%;
-  height: 50px;
-  border: hidden;
-  outline: none;
-  background-color: #fff;
-  color: black;
-  padding-left: 10px;
-  font-size: 14px;
-}
-.contact-form-popup-brochure button{
-  width: 100%;
-  background-color: #cfa14d;
-  color: #fff;
-  border: hidden;
-  font-weight: 600;
-  height: 50px;
-}
-@media(min-width:320px) and (max-width:480px){
-  .popup-brochure{
-    width: 90%;
-    padding: 6%;
-  }
-}
-</style>
-
-<div class="popup-brochure" id="popup-main-brochure">
-    <button class="popup-close-button-brochure" id="close-brochure">&times;</button>
-    <div class="popup-content" id="popup-content-id">
-        <h3 class=" mb-3">Download Brochure</h3>
-  <form class="contact-form-popup-brochure " id="contact-form-3" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validatecontact3(event)">
-                  <input type="hidden" name="access_key" value="ab22015f-fdf2-4933-83c1-34115ecfb4e0">
-              <input type="hidden" name="subject" id="subject-register-3" value="Register Interest Request From Landing Page">
-      <div class="d-flex mb-3 flex-column">
-      <input type="text" name="Full name" id="fname-3" class="" placeholder="Full name*" >
-      <span class="error-message" id="fname-error-3"></span>
-      </div>
-      <div class="d-flex mb-3 flex-column">
-          <input type="hidden" id="countryCode-popup" name="CountryCode">
-      <input type="text" name="phone number" id="phone-3" class="" placeholder="Mobile number*" >
-      <span class="error-message" id="phone-error-3"></span>
-      </div>
-      <div class="d-flex flex-column mb-3">
-      <input type="text" name="email" id="email-3" class="" placeholder="Email*" >
-      <span class="error-message" id="email-error-3"></span>
-      </div>
-      <button type="submit" value="">REQUEST NOW</button>
-  </form>
-    </div>
-</div>
-
-<div class="popup-price" id="popup-main-price">
-    <button class="popup-close-button-price" id="close-price">&times;</button>
-    <div class="popup-content" id="popup-content-id-price">
-        <h3 class=" mb-3">Request For Price Breakup</h3>
-  <form class="contact-form-popup-price " id="contact-form-3" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validatecontact3(event)">
-                  <input type="hidden" name="access_key" value="ab22015f-fdf2-4933-83c1-34115ecfb4e0">
-              <input type="hidden" name="subject" id="subject-register-3" value="Register Interest Request From Landing Page">
-      <div class="d-flex mb-3 flex-column">
-      <input type="text" name="Full name" id="fname-3" class="" placeholder="Full name*" >
-      <span class="error-message" id="fname-error-3"></span>
-      </div>
-      <div class="d-flex mb-3 flex-column">
-          <input type="hidden" id="countryCode-popup" name="CountryCode">
-      <input type="text" name="phone number" id="phone-3" class="" placeholder="Mobile number*" >
-      <span class="error-message" id="phone-error-3"></span>
-      </div>
-      <div class="d-flex flex-column mb-3">
-      <input type="text" name="email" id="email-3" class="" placeholder="Email*" >
-      <span class="error-message" id="email-error-3"></span>
-      </div>
-      <div class="d-flex flex-column mb-3">
-        <input type="text" name="city" id="email-3" class="" placeholder="City*" >
-        <span class="error-message" id="email-error-3"></span>
-        </div>
-      <button type="submit" value="">REGISTER NOW</button>
-  </form>
-    </div>
-</div>
-
-<div class="popup" id="popup-main">
-    <button class="popup-close-button" id="close">&times;</button>
-    <div class="popup-content" id="popup-content-id">
-        <h3 class="text-light lap-register mb-3">Register Your Interest Now!</h3>
-  <form class="contact-form-popup " id="contact-form-3" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validatecontact3(event)">
-                  <input type="hidden" name="access_key" value="ab22015f-fdf2-4933-83c1-34115ecfb4e0">
-              <input type="hidden" name="subject" id="subject-register-3" value="Register Interest Request From Landing Page">
-      <div class="d-flex mb-3 flex-column">
-      <input type="text" name="Full name" id="fname-3" class="" placeholder="Full name*" >
-      <span class="error-message" id="fname-error-3"></span>
-      </div>
-      <div class="d-flex mb-3 flex-column">
-          <input type="hidden" id="countryCode-popup" name="CountryCode">
-      <input type="text" name="phone number" id="phone-3" class="" placeholder="Mobile number*" >
-      <span class="error-message" id="phone-error-3"></span>
-      </div>
-      <div class="d-flex flex-column mb-3">
-      <input type="text" name="email" id="email-3" class="" placeholder="Email*" >
-      <span class="error-message" id="email-error-3"></span>
-      </div>
-      <button type="submit" value="">ENQUIRE NOW</button>
-  </form>
-    </div>
-</div>
-<script>
+  </style>
+  <script>
     window.addEventListener("load", function(){
         setTimeout(function(){
             document.querySelector(".popup").style.display = "block";
@@ -1139,7 +1129,11 @@
         document.querySelector(".popup").style.display = "block";
     });
 
-    document.querySelector("#open-video").addEventListener("click", function(){
+    document.querySelector("#open-btn-2").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "block";
+    });
+
+    document.querySelector("#open-btn-3").addEventListener("click", function(){
         document.querySelector(".popup").style.display = "block";
     });
 
@@ -1150,68 +1144,68 @@
     document.querySelector(".popup").style.display = "none";
 });
 </script>
-<script>
+        <script>
+            const txts=document.querySelector(".animate-text").children,
+                  txtsLen=txts.length;
+              let index=0;
+             const textInTimer=2000,
+                   textOutTimer=2000;
 
-    document.querySelector("#open-btn-brochure").addEventListener("click", function(){
-        document.querySelector(".popup-brochure").style.display = "block";
-    });
+            function animateText() {
+               for(let i=0; i<txtsLen; i++){
+                 txts[i].classList.remove("text-in","text-out");
+               }
+               txts[index].classList.add("text-in");
 
-    document.querySelector("#close-brochure").addEventListener("click", function(){
-        document.querySelector(".popup-brochure").style.display = "none";
-    });
-</script>
-<script>
+               setTimeout(function(){
+                   txts[index].classList.add("text-out");
+               },textOutTimer)
 
-    document.querySelector("#open-btn-price").addEventListener("click", function(){
-        document.querySelector(".popup-price").style.display = "block";
-    });
+               setTimeout(function(){
 
-    document.querySelector("#open-btn-price-2").addEventListener("click", function(){
-        document.querySelector(".popup-price").style.display = "block";
-    });
+                 if(index == txtsLen-1){
+                     index=0;
+                   }
+                  else{
+                      index++;
+                    }
+                   animateText();
+               },textInTimer);
+            }
 
-    document.querySelector("#open-btn-price-3").addEventListener("click", function(){
-        document.querySelector(".popup-price").style.display = "block";
-    });
+            window.onload=animateText;
 
-    document.querySelector("#open-btn-price-4").addEventListener("click", function(){
-        document.querySelector(".popup-price").style.display = "block";
-    });
-
-    document.querySelector("#close-price").addEventListener("click", function(){
-        document.querySelector(".popup-price").style.display = "none";
-    });
-</script>
-<script>
-    var btn = document.querySelector('.toggle');
-    var btnst = true;
-    var sidebar = document.getElementById('sidebar');
-    var links = sidebar.querySelectorAll('a');
-    
-    btn.onclick = function() {
-      toggleSidebar();
-    };
-    
-    links.forEach(function(link) {
-      link.onclick = function() {
-        if (!btnst) { 
+   </script>
+       <script>
+        var btn = document.querySelector('.toggle');
+        var btnst = true;
+        var sidebar = document.getElementById('sidebar');
+        var links = sidebar.querySelectorAll('a');
+        
+        btn.onclick = function() {
           toggleSidebar();
+        };
+        
+        links.forEach(function(link) {
+          link.onclick = function() {
+            if (!btnst) { 
+              toggleSidebar();
+            }
+          };
+        });
+        
+        function toggleSidebar() {
+          if(btnst) {
+            document.querySelector('.toggle span').classList.add('toggle');
+            sidebar.classList.add('sidebarshow');
+            btnst = false;
+          } else {
+            document.querySelector('.toggle span').classList.remove('toggle');
+            sidebar.classList.remove('sidebarshow');
+            btnst = true;
+          }
         }
-      };
-    });
-    
-    function toggleSidebar() {
-      if(btnst) {
-        document.querySelector('.toggle span').classList.add('toggle');
-        sidebar.classList.add('sidebarshow');
-        btnst = false;
-      } else {
-        document.querySelector('.toggle span').classList.remove('toggle');
-        sidebar.classList.remove('sidebarshow');
-        btnst = true;
-      }
-    }
-    </script>
+        </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
