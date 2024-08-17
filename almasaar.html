@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoreline</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="img/visionx-3.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            font-family: "Montserrat", sans-serif;
+        }
+        .navbar{
+            width: 100%;
+            height: 60px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-logo img{
+            width: auto;
+            height: 100%;
+            object-fit: contain;
+        }
+        .nav-links{
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .nav-links a:focus{
+            border-bottom: 2px solid black;
+            padding-bottom: 2px;
+        }
+        .hero{
+            background-image:linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)), url(https://www.arada.com/wp-content/uploads/2022/05/header-1-e1653744980691.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-content{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .hero-content h1{
+            font-size: 40px;
+            font-weight: 600;
+            color: black;
+            background-color: #fff;
+            padding: 5px;
+            transition: all 0.4s ease;
+        }
+        .hero-content h3{
+            font-size: 30px;
+            color: #fff;
+        }
+        .hero-content h4{
+            color: #fff;
+        }
+        .hero-content h2{
+            font-weight: 600;
+            font-size: 30px;
+            text-transform: uppercase;
+            background-color: #D0AD6A;
+            color: #fff;
+            transition: all 0.4s ease;
+            padding: 10px;
+        }
+        .hero-content h1:hover{
+            background-color: black;
+            color: #fff;
+            cursor: pointer;
+        }
+        .hero-content h2:hover{
+            background-color: #fff;
+            color: #D0AD6A;
+            cursor: pointer;
+        }
+        .hero-content a{
+            text-decoration: none;
+        }
+        .hero-content button{
+            background-color: black;
+            color: #fff;
+            border: hidden;
+            border-radius: 10px;
+            width: 180px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 40px;
+            transition: all 0.5s ease;
+            font-weight: 600;
+        }
+        .hero-content button i{
+            display: none;
+        }
+        .hero-content button:hover i{
+            display: block;
+        }
+        /* From Uiverse.io by nathann09 */ 
+.form {
+  background-color: #fff;
+  display: block;
+  padding: 1rem;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input, .form button {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.input-container input {
+  background-color: #fff;
+  height: 40px;
+  font-size: 0.875rem;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #D0AD6A;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.signup-link {
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.signup-link a {
+  text-decoration: underline;
+}
+.hero-form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ </style>
+ </head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-logo">
+            <img src="img/visionx-3.png" alt="">
+        </div>
+        <div class="nav-links">
+            <a href="#price">Price</a>
+            <a href="#floor">Floor Plan</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#location">Location</a>
+            <a href="#virtual">Virtual Tour</a>
+        </div>
+        <div class="navbar-mobile">
+            <button type="button" class="toggle" id="toggle">
+                <span></span>
+            </button>
+            <div class="sidebar" id='sidebar'>
+                <a href="" class="logo-sidebar"><img src="img/visionx.png" alt="" height="50" width="auto"></a>
+                <ul>
+                  <li><a href="#price">PRICE</a></li>
+                   <li><a href="#floor">FLOOR PLAN</a></li>
+                    <li><a href="#amenities">AMENITIES</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#location">LOCATION</a></li>
+                    <li><a href="#virtual">VIRTUAL TOUR</a></li>
+                </ul>
+              </div>
+            </div>
+    </div>
+    <div class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="hero-content">
+                        <h1 class="mb-2">BOOKING OPEN</h1>
+                        <h3>Masaar By Arada</h3>
+                        <h4>At Sharjah</h4>
+                        <h2 class="mb-3 mt-2">Book Now by Paying 5%</h2>
+                        <h3 class="mb-3">Starting Price AED 2.8 M</h3>
+                        <button id="open-btn">Register Now<i class="fa-solid fa-arrow-right-long"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                <div class="hero-form">
+
+    <form class="form">
+       <p class="form-title">Register here and Avail the Best Offers!!</p>
+        <div class="input-container">
+          <input type="email" placeholder="Enter Name">
+      </div>
+      <div class="input-container">
+          <input type="text" placeholder="Enter Email">
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Enter Phone Number">
+          </div>
+         <button type="submit" class="submit">
+        Pre Register Now
+      </button>
+   </form>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .about{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .about h1{
+            font-weight: 600;
+            font-size: 40px;
+        }
+        .about h3{
+            font-size: 25px;
+        }
+        .about-image{
+            width: 100%;
+            height: 100%;
+        }
+        .about-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .about button{
+            border: hidden;
+            background-color: #fff;
+            color: #D0AD6A;
+            border: 1px solid #D0AD6A;
+            font-weight: 500;
+            padding: 10px;
+        }
+        .about button i{
+            margin-right: 10px;
+        }
+        .amenities{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .amenities h1{
+            font-weight: 600;
+            font-size: 40px;
+        }
+        .amenity-card{
+            height: auto;
+            padding: 10px;
+            width: 100%;
+            height: auto;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        .amenity-card img{
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        .section-amenity{
+            width: 100%;
+            background-color: #F4F4F4;
+            height: auto;
+        }
+        .amenity-card h3{
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    </style>
+    <div class="container pt-4 pb-4">
+        <div class="row gy-3">
+            <div class="col-md-6">
+                <div class="about">
+                    <h1>About Masaar</h1>
+                    <h3>At Sharjah</h3>
+                    <p>Masaar is a residential sanctuary formed by eight gated communities, with abundant green space and every necessity close at hand.</p>
+                    <p>Look around, you’ll soon learn something. Nature reveals what true harmony looks like.Masaar helps you strike a healthy balance in your own life – between work and play, family and “me” time,urban convenience and natural beauty.Remember life offline? Find a quiet corner for a chatwith friends and family. Need to get away from it all? Pedal your way across 12 kilometres of gorgeous cycling paths that wend their way through spacious woodland.</p>
+                    <button id="open-btn-brochure"><i class="fa-solid fa-file-arrow-down"></i>Request to Download Brochure</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-image">
+                    <img src="https://www.arabianbusiness.com/cloud/2024/01/17/Masaar.jpg" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="section-amenity pt-3 pb-3" id="amenities">
+    <div class="container pt-4 pb-4">
+        <div class="row gx-3 gy-3">
+            <div class="col-md-4">
+                <div class="amenities">
+                    <h1>Amenities</h1>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row gx-2 gy-2">
+                    <div class="col-md-3">
+                        <div class="amenity-card">
+                            <img src="img/nest/gym.svg" alt="">
+                            <h3>GYM</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="amenity-card">
+                            <img src="img/nest/tabletennis.svg" alt="">
+                            <h3>TABLE tennis</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="amenity-card">
+                            <img src="img/nest/Garden.svg" alt="">
+                            <h3>viewing deck</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="amenity-card">
+                            <img src="img/nest/BADMINTONCOURT.svg" alt="">
+                            <h3>badminton court</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="amenity-card">
+                            <img src="img/nest/Kidsplaying.svg" alt="">
+                            <h3>kids play area</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="amenity-card">
+                            <img src="img/nest/swm.svg" alt="">
+                            <h3>swimming pool</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="amenity-card">
+                            <img src="img/nest/Yoga.svg" alt="">
+                            <h3>yoga</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="amenity-card">
+                            <img src="img/nest/MULTIPURPOSEHALL.svg" alt="">
+                            <h3>MULTIPURPOSEHALL</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .section-price h3{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .price-card{
+        width: 100%;
+        height: 200px;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        justify-content: center;
+    }
+    .price-card h3{
+        font-size: 20px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .price-card p{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .price-card button{
+        width: 100%;
+        height: 40px;
+        font-weight: 600;
+        border: hidden;
+        background-color: #D0AD6A;
+        color: #fff;
+    }
+    .section-floor h3{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .plan-card{
+        width: 100%;
+        height: 200px;
+        background-image:linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(https://developer-sales-office.com/Masaar-by-Arada/assets/img/floor_2.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        flex-direction: column;
+    }
+    .plan-card h3{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .plan-card button{
+        width: 150px;
+        height: 40px;
+        background-color: white;
+        color: black;
+        border: hidden;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+    .section-virtual{
+        background-color: #D0AD6A;
+        height: auto;
+        width: 100%;
+    }
+</style>
+<div class="container section-price pt-4 pb-4" id="price">
+    <h3 class="mb-4">Price</h3>
+    <div class="row gx-3 gy-3">
+        <div class="col-md-3">
+            <div class="price-card">
+                <h3 class="mb-3">4 BR Townhouses</h3>
+                <p class="mb-3">1817 to 3181 Sq.ft.</p>
+                <button id="open-btn-price">Request For Price</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="price-card">
+                <h3 class="mb-3">4 BR Villa</h3>
+                <p class="mb-3">3356 to 6855 Sq.ft.</p>
+                <button id="open-btn-price-2">Request For Price</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="price-card">
+                <h3 class="mb-3">5 BR Villa</h3>
+                <p class="mb-3">6223 to 7664 Sq.ft.</p>
+                <button id="open-btn-price-3">Request For Price</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="price-card">
+                <h3 class="mb-3">6 BR Villa</h3>
+                <p class="mb-3">9235 Sq.ft.</p>
+                <button id="open-btn-price-4">Request For Price</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container section-floor pt-4 pb-4" id="floor">
+    <h3 class="mb-4">Site & Floor Plan</h3>
+    <div class="row gx-4 gy-3">
+        <div class="col-md-4">
+        <div class="plan-card">
+            <h3 class="mb-3">4 BR</h3>
+            <button>Enquire Now</button>
+        </div>
+        </div>
+        <div class="col-md-4">
+            <div class="plan-card">
+                <h3 class="mb-3">5 BR</h3>
+                <button>Enquire Now</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="plan-card">
+                <h3 class="mb-3">6 BR</h3>
+                <button>Enquire Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .section-virtual h3{
+        font-weight: 600;
+        color: #fff;
+    }
+    .section-virtual p{
+        color: #fff;
+    }
+    .section-virtual img{
+        width: auto;
+        height: 200px;
+    }
+    .section-virtual button{
+        background-color: #fff;
+        color: black;
+        height: 40px;
+        width: 250px;
+        border: hidden;
+        border-radius: 5px;
+    }    
+    .navbar-mobile{
+        display: none;
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .nav-logo{
+            width: 30%;
+        }
+        .section-virtual img{
+            width: 100%;
+        }
+        .hero{
+            height: 80vh;
+        }
+        .hero-form{
+            display: none;
+        }
+        .nav-links{
+            display: none;
+        }
+        .hero-content h1{
+            font-size: 30px;
+        }
+        .hero-content h2{
+            font-size: 20px;
+        }
+        .hero-content h3{
+            font-size: 25px;
+        }
+        .navbar-mobile{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #toggle {
+  background:transparent;
+  border:none;
+  width:30px;
+  height:30px;
+  cursor:pointer; 
+  outline:0;
+}
+
+.toggle span {
+  width:100%;
+  height:3px;
+  background:#555;
+  display:block;
+  position:relative;
+  coursor:pointer;
+}
+
+.toggle span:before,
+.toggle span:after {
+  content:'';
+  position:absolute;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#555;
+  transition: all 0.3s ease-out;
+}
+
+.toggle span:before {
+  top:-8px;
+}
+
+.toggle span:after {
+  top:8px;
+}
+
+.toggle span.toggle {
+  background:transparent;
+}
+
+.toggle span.toggle:before {
+  top:0;
+  transform:rotate(-45deg);
+  background:#cfa14d;
+  
+}
+
+.toggle span.toggle:after {
+  top:0;
+  transform:rotate(45deg);
+  background:#cfa14d;
+}
+.navbar img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+.sidebar {
+  background:black;
+  width:235px;
+  position:fixed;
+  top:0;
+  left:-235px;
+  z-index: 999;
+  height:100%;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  padding-top:90px;
+  transition:all 0.3s ease-out;
+}
+
+.sidebar ul {
+  list-style:none;
+}
+
+.sidebar ul li {
+  display:block;
+}
+
+.sidebar ul li a {
+  padding:8px 15px;
+  font-size:16px;
+  color:#fff;
+  text-decoration:none;
+  display:block;
+  position:relative;
+  z-index:1;
+  transition:all 0.3s ease-out;
+  font-weight:500;
+}
+
+.sidebar ul li a i{
+    margin-right: 8px;
+    color: #cfa14d;
+}
+.sidebar ul li a:before {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:50%;
+  right:50%;
+  transform:translate(-50%,-50%);
+  width:0;
+  height:1px;
+  background:#cfa14d;
+  z-index:-1;
+  transition:all 0.3s ease-out;
+}
+
+.sidebar ul li a:hover:before {
+  width:100%;
+}
+
+.sidebar ul li a:hover {
+  color:#cfa14d;
+}
+
+.sidebarshow {
+  left:0;
+}
+.logo-sidebar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-sidebar img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+    .bg-video-container {
+  position: relative;
+  height: 80vh;
+  margin:auto;
+  width:100%;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top:0;
+}
+.card_box{
+    height: 200px;
+}
+.navbar-links{
+    display: none;
+}
+    }
+</style>
+<div class="section-virtual pt-4 pb-4" id="virtual">
+    <div class="container pt-3 pb-3">
+        <div class="row gx-3 gy-3">
+            <div class="col-md-6">
+        <h3 class="mb-4">Take a 360 Degree Tour Of The Project</h3>
+        <img class="mb-3" src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/360view.jpg" alt="">
+        <p>Schedule A Virtual Tour With Our Expert</p>
+        <button id="open-video">Schedule A Virtual Tour</button>
+    </div>
+    <div class="col-md-6">
+        <h3 class="mb-4">Receive A Digital Copy Of Our Brochure</h3>
+        <img class="mb-3" src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/DigitalCopy.jpg" alt="">
+        <p>And Learn More About Our Spacious Residences</p>
+        <button>Request Here</button>
+    </div>
+    </div>
+</div>
+</div>
+<style>
+    .section-location h3{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .section-location li{
+        font-size: 18px;
+        list-style-type: none;
+        margin-bottom:10px;
+    }
+    .section-location li i{
+        margin-right: 10px;
+        color: #D0AD6A;
+    }
+    .section-location li span{
+        font-weight: 600;
+    }
+</style>
+<div class="container section-location pt-4 pb-4" id="location">
+    <h3 class="mb-3">Location</h3>
+    <div class="row gx-4 gy-3">
+        <div class="col-md-6">
+            <h4>Map</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2748.5423072840913!2d55.59672900000001!3d25.259054!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef58dc72d75fb17%3A0x860b2a2f9e5da5e0!2sMasaar%20by%20Arada!5e1!3m2!1sen!2sin!4v1723891462121!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6">
+            <h4 class="mb-3">Connectivity</h4>
+            <li><i class="fa-solid fa-location-dot"></i><span>2 Minutes</span> from Tilal Mall & Sharjah Mosque</li>
+            <li><i class="fa-solid fa-location-dot"></i><span>2 Mins </span>from Sharjah Botinical Garden & Sharjah Convention center</li>
+            <li><i class="fa-solid fa-location-dot"></i><span> 15 Mins </span>from Sharjah International Airport Free Zone (SAIF)</li>
+            <li><i class="fa-solid fa-location-dot"></i><span>20 Mins </span>from Dubai International Airport & Sharjah Corniche</li>
+            <li><i class="fa-solid fa-location-dot"></i><span>20 Mins </span>from Aljada</li>
+            <li><i class="fa-solid fa-location-dot"></i>Easy Access to Emirates Road, Mleiha Road Khorfakan Road</li>
+        </div>
+    </div>
+</div>
+<style>
+    .gallery h3{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .gallery img{
+        cursor: zoom-in;
+    }
+    .gallery-left{
+        width: 100%;
+        height: 350px;
+    }
+    .gallery-left img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .gallery-right{
+        height: 150px;
+        width: 100%;
+    }
+    .gallery-right img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+<div class="container gallery pt-4 pb-4" id="gallery">
+    <h3 class="mb-3">Gallery</h3>
+    <div class="row gx-3 gy-3">
+        <div class="col-md-8">
+            <div class="gallery-left">
+                <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery6.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row gy-3 gx-3">
+                <div class="col-md-6">
+                    <div class="gallery-right">
+                        <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-right">
+                        <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-right">
+                        <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-right">
+                        <img src="https://developer-sales-office.com/Masaar-by-Arada/assets/img/gallery2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<style>
+    .section-base h3{
+        font-size: 40px;
+        font-weight: 600;
+    }
+</style>
+<div class="section-base">
+    <div class="container pt-4 pb-4">
+        <h3 class="mb-3">About The Developer</h3>
+        <p>In September 2017, we launched our second project, Aljada. Located on the last large plot of undeveloped land in Sharjah, Aljada is the Emirate’s largest ever megaproject and a fully self-sustained city within a city. It’s a destination where everything is in reach, and where you can enjoy a stress-free active lifestyle. From apartments to townhouses and villas, Aljada has homes to suit every budget.</p>
+        <p>In March 2017, we launched our first community, Nasma Residences. Located in the Al Tay suburb in the heart of New Sharjah, Nasma Residences has nearly 1,000 villas and townhouses in a community that is ideally designed to suit your family. We have already started delivering homes and will complete the project in 2020.</p>
+        <p>In September 2017, we launched our second project, Aljada. Located on the last large plot of undeveloped land in Sharjah, Aljada is the Emirate’s largest ever megaproject and a fully self-sustained city within a city. It’s a destination where everything is in reach, and where you can enjoy a stress-free active lifestyle. From apartments to townhouses and villas, Aljada has homes to suit every budget.</p>
+    </div>
+</div>
+<style>
+         .popup{
+    background-color:black;
+    width: 45%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    height: auto;
+    top: 50%;
+    left:50%;
+    padding:3%;
+    z-index: 100;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+}
+.popup-close-button{
+    display: block;
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: transparent;
+    font-size: 40px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.contact-form-popup input{
+  width: 100%;
+  height: 50px;
+  border: hidden;
+  outline: none;
+  background-color: #fff;
+  color: black;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.contact-form-popup button{
+  width: 100%;
+  background-color: #cfa14d;
+  color: #fff;
+  border: hidden;
+  font-weight: 600;
+  height: 50px;
+}
+@media(min-width:320px) and (max-width:480px){
+  .popup{
+    width: 90%;
+    padding: 6%;
+  }
+}
+.popup-price{
+    background-color:#c8c8c8;
+    width: 35%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    height: auto;
+    top: 50%;
+    left:50%;
+    padding:3%;
+    z-index: 100;
+    display: none;
+    text-align: center;
+}
+.popup-price h3{
+    color: #000000;
+    font-weight: 600;
+}
+.popup-close-button-price{
+    display: block;
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: transparent;
+    font-size: 60px;
+    color: #cfa14d;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.contact-form-popup-price input{
+  width: 100%;
+  height: 50px;
+  border: hidden;
+  outline: none;
+  border-bottom: 2px solid gray;
+  background:none;
+  color: black;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.contact-form-popup-price button{
+  width: 100%;
+  background-color: #D0AD6A;
+  color: #fff;
+  border: hidden;
+  font-weight: 600;
+  height: 50px;
+}
+@media(min-width:320px) and (max-width:480px){
+  .popup-price{
+    width: 90%;
+    padding: 6%;
+  }
+}
+.popup-brochure{
+    background-color:black;
+    width: 45%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    height: auto;
+    top: 50%;
+    left:50%;
+    padding:3%;
+    z-index: 100;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+}
+.popup-brochure h3{
+    color: #fff;
+}
+.popup-close-button-brochure{
+    display: block;
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: transparent;
+    font-size: 40px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.contact-form-popup-brochure input{
+  width: 100%;
+  height: 50px;
+  border: hidden;
+  outline: none;
+  background-color: #fff;
+  color: black;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.contact-form-popup-brochure button{
+  width: 100%;
+  background-color: #cfa14d;
+  color: #fff;
+  border: hidden;
+  font-weight: 600;
+  height: 50px;
+}
+@media(min-width:320px) and (max-width:480px){
+  .popup-brochure{
+    width: 90%;
+    padding: 6%;
+  }
+}
+</style>
+
+<div class="popup-brochure" id="popup-main-brochure">
+    <button class="popup-close-button-brochure" id="close-brochure">&times;</button>
+    <div class="popup-content" id="popup-content-id">
+        <h3 class=" mb-3">Download Brochure</h3>
+  <form class="contact-form-popup-brochure " id="contact-form-3" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validatecontact3(event)">
+                  <input type="hidden" name="access_key" value="ab22015f-fdf2-4933-83c1-34115ecfb4e0">
+              <input type="hidden" name="subject" id="subject-register-3" value="Register Interest Request From Landing Page">
+      <div class="d-flex mb-3 flex-column">
+      <input type="text" name="Full name" id="fname-3" class="" placeholder="Full name*" >
+      <span class="error-message" id="fname-error-3"></span>
+      </div>
+      <div class="d-flex mb-3 flex-column">
+          <input type="hidden" id="countryCode-popup" name="CountryCode">
+      <input type="text" name="phone number" id="phone-3" class="" placeholder="Mobile number*" >
+      <span class="error-message" id="phone-error-3"></span>
+      </div>
+      <div class="d-flex flex-column mb-3">
+      <input type="text" name="email" id="email-3" class="" placeholder="Email*" >
+      <span class="error-message" id="email-error-3"></span>
+      </div>
+      <button type="submit" value="">REQUEST NOW</button>
+  </form>
+    </div>
+</div>
+
+<div class="popup-price" id="popup-main-price">
+    <button class="popup-close-button-price" id="close-price">&times;</button>
+    <div class="popup-content" id="popup-content-id-price">
+        <h3 class=" mb-3">Request For Price Breakup</h3>
+  <form class="contact-form-popup-price " id="contact-form-3" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validatecontact3(event)">
+                  <input type="hidden" name="access_key" value="ab22015f-fdf2-4933-83c1-34115ecfb4e0">
+              <input type="hidden" name="subject" id="subject-register-3" value="Register Interest Request From Landing Page">
+      <div class="d-flex mb-3 flex-column">
+      <input type="text" name="Full name" id="fname-3" class="" placeholder="Full name*" >
+      <span class="error-message" id="fname-error-3"></span>
+      </div>
+      <div class="d-flex mb-3 flex-column">
+          <input type="hidden" id="countryCode-popup" name="CountryCode">
+      <input type="text" name="phone number" id="phone-3" class="" placeholder="Mobile number*" >
+      <span class="error-message" id="phone-error-3"></span>
+      </div>
+      <div class="d-flex flex-column mb-3">
+      <input type="text" name="email" id="email-3" class="" placeholder="Email*" >
+      <span class="error-message" id="email-error-3"></span>
+      </div>
+      <div class="d-flex flex-column mb-3">
+        <input type="text" name="city" id="email-3" class="" placeholder="City*" >
+        <span class="error-message" id="email-error-3"></span>
+        </div>
+      <button type="submit" value="">REGISTER NOW</button>
+  </form>
+    </div>
+</div>
+
+<div class="popup" id="popup-main">
+    <button class="popup-close-button" id="close">&times;</button>
+    <div class="popup-content" id="popup-content-id">
+        <h3 class="text-light lap-register mb-3">Register Your Interest Now!</h3>
+  <form class="contact-form-popup " id="contact-form-3" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validatecontact3(event)">
+                  <input type="hidden" name="access_key" value="ab22015f-fdf2-4933-83c1-34115ecfb4e0">
+              <input type="hidden" name="subject" id="subject-register-3" value="Register Interest Request From Landing Page">
+      <div class="d-flex mb-3 flex-column">
+      <input type="text" name="Full name" id="fname-3" class="" placeholder="Full name*" >
+      <span class="error-message" id="fname-error-3"></span>
+      </div>
+      <div class="d-flex mb-3 flex-column">
+          <input type="hidden" id="countryCode-popup" name="CountryCode">
+      <input type="text" name="phone number" id="phone-3" class="" placeholder="Mobile number*" >
+      <span class="error-message" id="phone-error-3"></span>
+      </div>
+      <div class="d-flex flex-column mb-3">
+      <input type="text" name="email" id="email-3" class="" placeholder="Email*" >
+      <span class="error-message" id="email-error-3"></span>
+      </div>
+      <button type="submit" value="">ENQUIRE NOW</button>
+  </form>
+    </div>
+</div>
+<script>
+    window.addEventListener("load", function(){
+        setTimeout(function(){
+            document.querySelector(".popup").style.display = "block";
+        }, 5000); // 5 seconds delay
+    });
+
+    document.querySelector("#open-btn").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "block";
+    });
+
+    document.querySelector("#open-video").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "block";
+    });
+
+    document.querySelector("#close").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+    });
+    document.querySelector("#closesecond").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+</script>
+<script>
+
+    document.querySelector("#open-btn-brochure").addEventListener("click", function(){
+        document.querySelector(".popup-brochure").style.display = "block";
+    });
+
+    document.querySelector("#close-brochure").addEventListener("click", function(){
+        document.querySelector(".popup-brochure").style.display = "none";
+    });
+</script>
+<script>
+
+    document.querySelector("#open-btn-price").addEventListener("click", function(){
+        document.querySelector(".popup-price").style.display = "block";
+    });
+
+    document.querySelector("#open-btn-price-2").addEventListener("click", function(){
+        document.querySelector(".popup-price").style.display = "block";
+    });
+
+    document.querySelector("#open-btn-price-3").addEventListener("click", function(){
+        document.querySelector(".popup-price").style.display = "block";
+    });
+
+    document.querySelector("#open-btn-price-4").addEventListener("click", function(){
+        document.querySelector(".popup-price").style.display = "block";
+    });
+
+    document.querySelector("#close-price").addEventListener("click", function(){
+        document.querySelector(".popup-price").style.display = "none";
+    });
+</script>
+<script>
+    var btn = document.querySelector('.toggle');
+    var btnst = true;
+    var sidebar = document.getElementById('sidebar');
+    var links = sidebar.querySelectorAll('a');
+    
+    btn.onclick = function() {
+      toggleSidebar();
+    };
+    
+    links.forEach(function(link) {
+      link.onclick = function() {
+        if (!btnst) { 
+          toggleSidebar();
+        }
+      };
+    });
+    
+    function toggleSidebar() {
+      if(btnst) {
+        document.querySelector('.toggle span').classList.add('toggle');
+        sidebar.classList.add('sidebarshow');
+        btnst = false;
+      } else {
+        document.querySelector('.toggle span').classList.remove('toggle');
+        sidebar.classList.remove('sidebarshow');
+        btnst = true;
+      }
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
